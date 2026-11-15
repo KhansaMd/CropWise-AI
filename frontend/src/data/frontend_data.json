@@ -1,0 +1,3104 @@
+{
+  "project": "CropWise AI",
+  "description": "Transparent agricultural decision-support comparisons using NASA POWER climate observations.",
+  "important_limitations": [
+    "Example comparisons, not farming recommendations.",
+    "NASA POWER climate indicators are observations, not crop-specific predictions.",
+    "Partial comparison scores use illustrative team estimates for water need and climate resilience.",
+    "Soil health, crop suitability and economics are not currently scored.",
+    "Scores are not validated agronomic suitability rankings.",
+    "Expert review is required before practical agricultural use."
+  ],
+  "source": "NASA POWER Daily API",
+  "regions": {
+    "punjab_ludhiana": {
+      "id": "punjab_ludhiana",
+      "district": "Ludhiana",
+      "state": "Punjab",
+      "coordinates": {
+        "latitude": 30.9,
+        "longitude": 75.85
+      },
+      "baseline_years": [
+        2016,
+        2025
+      ],
+      "season_data_quality": {
+        "kharif": {
+          "season_year": 2026,
+          "period_start": "2026-06-01",
+          "period_end": "2026-10-31",
+          "complete": true,
+          "missing_pct": {
+            "rain": 0.0,
+            "t_mean": 0.0,
+            "t_max": 0.0
+          }
+        },
+        "rabi": {
+          "season_year": 2025,
+          "period_start": "2025-11-01",
+          "period_end": "2026-04-30",
+          "complete": true,
+          "missing_pct": {
+            "rain": 0.0,
+            "t_mean": 0.0,
+            "t_max": 0.0
+          }
+        },
+        "summer": {
+          "season_year": 2026,
+          "period_start": "2026-03-01",
+          "period_end": "2026-06-30",
+          "complete": true,
+          "missing_pct": {
+            "rain": 0.0,
+            "t_mean": 0.0,
+            "t_max": 0.0
+          }
+        }
+      },
+      "latest_complete_seasons": {
+        "kharif": 2026,
+        "rabi": 2025,
+        "summer": 2026
+      },
+      "season_risk_indicators": {
+        "kharif": {
+          "season": "kharif",
+          "season_year": 2026,
+          "complete": true,
+          "climate_flags": [
+            {
+              "indicator": "rainfall_below_baseline",
+              "observed_value": -20.6,
+              "unit": "%",
+              "message": "Seasonal rainfall was below its historical baseline."
+            },
+            {
+              "indicator": "temperature_above_baseline",
+              "observed_value": 0.84,
+              "unit": "°C",
+              "message": "Mean temperature was above its historical baseline."
+            },
+            {
+              "indicator": "dry_spell_observed",
+              "observed_value": 16,
+              "unit": "days",
+              "message": "A consecutive dry spell was observed."
+            },
+            {
+              "indicator": "heat_days_above_normal",
+              "observed_value": 29,
+              "historical_normal": 27.1,
+              "unit": "days",
+              "message": "Heat days exceeded the historical normal."
+            }
+          ],
+          "needs_expert_review": true,
+          "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+        },
+        "rabi": {
+          "season": "rabi",
+          "season_year": 2025,
+          "complete": true,
+          "climate_flags": [
+            {
+              "indicator": "rainfall_below_baseline",
+              "observed_value": -6.59,
+              "unit": "%",
+              "message": "Seasonal rainfall was below its historical baseline."
+            },
+            {
+              "indicator": "dry_spell_observed",
+              "observed_value": 60,
+              "unit": "days",
+              "message": "A consecutive dry spell was observed."
+            }
+          ],
+          "needs_expert_review": true,
+          "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+        },
+        "summer": {
+          "season": "summer",
+          "season_year": 2026,
+          "complete": true,
+          "climate_flags": [
+            {
+              "indicator": "rainfall_below_baseline",
+              "observed_value": -5.43,
+              "unit": "%",
+              "message": "Seasonal rainfall was below its historical baseline."
+            },
+            {
+              "indicator": "dry_spell_observed",
+              "observed_value": 18,
+              "unit": "days",
+              "message": "A consecutive dry spell was observed."
+            }
+          ],
+          "needs_expert_review": true,
+          "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+        }
+      },
+      "rotations": [
+        {
+          "id": "base",
+          "type": "sequence",
+          "crops": [
+            "rice",
+            "wheat"
+          ],
+          "crop_evidence": [
+            {
+              "crop_id": "rice",
+              "crop_name": "rice",
+              "source_url": "https://agritech.tnau.ac.in/agriculture/agri_seasonandvarieties_rice.html",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            },
+            {
+              "crop_id": "wheat",
+              "crop_name": "wheat",
+              "source_url": "https://icar.org.in/sites/default/files/Circulars/India_BRICS_Agriculture_Report.pdf",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            }
+          ],
+          "label": "example comparison, not a recommendation",
+          "display_note": null,
+          "evidence_status": "pending_source_verification",
+          "decision_status": "provisional",
+          "validation_status": "ok",
+          "scores": {
+            "water": 30.0,
+            "soil_health": null,
+            "climate_resilience": 40.0,
+            "crop_suitability": null,
+            "economics": null
+          },
+          "overall": 34.0,
+          "score_label": "Partial illustrative comparison score",
+          "score_coverage": {
+            "available_components": [
+              "water",
+              "climate_resilience"
+            ],
+            "missing_components": [
+              "soil_health",
+              "crop_suitability",
+              "economics"
+            ],
+            "available_count": 2,
+            "total_count": 5
+          },
+          "score_note": "Illustrative team estimates only. Not a validated crop suitability score.",
+          "confidence": "low",
+          "risks": [],
+          "climate_risks": [
+            {
+              "crop_id": "rice",
+              "crop_name": "Rice",
+              "season_climate_indicators": {
+                "kharif": {
+                  "season": "kharif",
+                  "season_year": 2026,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -20.6,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "temperature_above_baseline",
+                      "observed_value": 0.84,
+                      "unit": "°C",
+                      "message": "Mean temperature was above its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 16,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    },
+                    {
+                      "indicator": "heat_days_above_normal",
+                      "observed_value": 29,
+                      "historical_normal": 27.1,
+                      "unit": "days",
+                      "message": "Heat days exceeded the historical normal."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                },
+                "rabi": {
+                  "season": "rabi",
+                  "season_year": 2025,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -6.59,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 60,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            },
+            {
+              "crop_id": "wheat",
+              "crop_name": "Wheat",
+              "season_climate_indicators": {
+                "rabi": {
+                  "season": "rabi",
+                  "season_year": 2025,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -6.59,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 60,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            }
+          ],
+          "missing_info": [
+            "rice: ph_range has not been verified.",
+            "rice: soil_ok has not been verified.",
+            "wheat: ph_range has not been verified.",
+            "wheat: soil_ok has not been verified.",
+            "No soil_health score is currently available.",
+            "No crop_suitability score is currently available.",
+            "No economics score is currently available."
+          ],
+          "needs_expert_review": true,
+          "reject_reasons": [],
+          "sources": [
+            "NASA POWER Daily API"
+          ],
+          "explanations": {
+            "en": "Crop sequence: rice -> wheat\nCheck status: basic checks passed\nOverall score: 34.0\nConfidence: low\nExample comparison only, not a farming recommendation.\nInformation still needed:\n- rice: ph_range has not been verified.\n- rice: soil_ok has not been verified.\n- wheat: ph_range has not been verified.\n- wheat: soil_ok has not been verified.\n- No soil_health score is currently available.\nExpert review is required before practical use.",
+            "hi": "फसल क्रम: धान → गेहूँ\nजाँच स्थिति: प्रारंभिक जाँच पास\nकुल स्कोर: 34.0\nविश्वास स्तर: कम\nयह केवल उदाहरण तुलना है, खेती की सिफारिश नहीं।\nसत्यापन के लिए आवश्यक जानकारी:\n- धान: मिट्टी का pH स्तर सत्यापित नहीं है।\n- धान: मिट्टी की उपयुक्तता सत्यापित नहीं है।\n- गेहूँ: मिट्टी का pH स्तर सत्यापित नहीं है।\n- गेहूँ: मिट्टी की उपयुक्तता सत्यापित नहीं है।\n- No soil_health score is currently available.\nकृषि विशेषज्ञ की समीक्षा आवश्यक है।"
+          }
+        },
+        {
+          "id": "alt1",
+          "type": "sequence",
+          "crops": [
+            "maize",
+            "wheat"
+          ],
+          "crop_evidence": [
+            {
+              "crop_id": "maize",
+              "crop_name": "maize",
+              "source_url": "https://icar.org.in/sites/default/files/Circulars/India_BRICS_Agriculture_Report.pdf",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            },
+            {
+              "crop_id": "wheat",
+              "crop_name": "wheat",
+              "source_url": "https://icar.org.in/sites/default/files/Circulars/India_BRICS_Agriculture_Report.pdf",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            }
+          ],
+          "label": "example comparison, not a recommendation",
+          "display_note": null,
+          "evidence_status": "pending_source_verification",
+          "decision_status": "provisional",
+          "validation_status": "ok",
+          "scores": {
+            "water": 50.0,
+            "soil_health": null,
+            "climate_resilience": 40.0,
+            "crop_suitability": null,
+            "economics": null
+          },
+          "overall": 46.0,
+          "score_label": "Partial illustrative comparison score",
+          "score_coverage": {
+            "available_components": [
+              "water",
+              "climate_resilience"
+            ],
+            "missing_components": [
+              "soil_health",
+              "crop_suitability",
+              "economics"
+            ],
+            "available_count": 2,
+            "total_count": 5
+          },
+          "score_note": "Illustrative team estimates only. Not a validated crop suitability score.",
+          "confidence": "low",
+          "risks": [],
+          "climate_risks": [
+            {
+              "crop_id": "maize",
+              "crop_name": "Maize",
+              "season_climate_indicators": {
+                "kharif": {
+                  "season": "kharif",
+                  "season_year": 2026,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -20.6,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "temperature_above_baseline",
+                      "observed_value": 0.84,
+                      "unit": "°C",
+                      "message": "Mean temperature was above its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 16,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    },
+                    {
+                      "indicator": "heat_days_above_normal",
+                      "observed_value": 29,
+                      "historical_normal": 27.1,
+                      "unit": "days",
+                      "message": "Heat days exceeded the historical normal."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                },
+                "rabi": {
+                  "season": "rabi",
+                  "season_year": 2025,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -6.59,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 60,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            },
+            {
+              "crop_id": "wheat",
+              "crop_name": "Wheat",
+              "season_climate_indicators": {
+                "rabi": {
+                  "season": "rabi",
+                  "season_year": 2025,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -6.59,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 60,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            }
+          ],
+          "missing_info": [
+            "maize: ph_range has not been verified.",
+            "maize: soil_ok has not been verified.",
+            "wheat: ph_range has not been verified.",
+            "wheat: soil_ok has not been verified.",
+            "No soil_health score is currently available.",
+            "No crop_suitability score is currently available.",
+            "No economics score is currently available."
+          ],
+          "needs_expert_review": true,
+          "reject_reasons": [],
+          "sources": [
+            "NASA POWER Daily API"
+          ],
+          "explanations": {
+            "en": "Crop sequence: maize -> wheat\nCheck status: basic checks passed\nOverall score: 46.0\nConfidence: low\nExample comparison only, not a farming recommendation.\nInformation still needed:\n- maize: ph_range has not been verified.\n- maize: soil_ok has not been verified.\n- wheat: ph_range has not been verified.\n- wheat: soil_ok has not been verified.\n- No soil_health score is currently available.\nExpert review is required before practical use.",
+            "hi": "फसल क्रम: मक्का → गेहूँ\nजाँच स्थिति: प्रारंभिक जाँच पास\nकुल स्कोर: 46.0\nविश्वास स्तर: कम\nयह केवल उदाहरण तुलना है, खेती की सिफारिश नहीं।\nसत्यापन के लिए आवश्यक जानकारी:\n- मक्का: मिट्टी का pH स्तर सत्यापित नहीं है।\n- मक्का: मिट्टी की उपयुक्तता सत्यापित नहीं है।\n- गेहूँ: मिट्टी का pH स्तर सत्यापित नहीं है।\n- गेहूँ: मिट्टी की उपयुक्तता सत्यापित नहीं है।\n- No soil_health score is currently available.\nकृषि विशेषज्ञ की समीक्षा आवश्यक है।"
+          }
+        },
+        {
+          "id": "alt2",
+          "type": "sequence",
+          "crops": [
+            "rice",
+            "wheat",
+            "black_gram"
+          ],
+          "crop_evidence": [
+            {
+              "crop_id": "rice",
+              "crop_name": "rice",
+              "source_url": "https://agritech.tnau.ac.in/agriculture/agri_seasonandvarieties_rice.html",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            },
+            {
+              "crop_id": "wheat",
+              "crop_name": "wheat",
+              "source_url": "https://icar.org.in/sites/default/files/Circulars/India_BRICS_Agriculture_Report.pdf",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            },
+            {
+              "crop_id": "black_gram",
+              "crop_name": "black_gram",
+              "source_url": "https://agritech.tnau.ac.in/agriculture/CropProduction/Pulses/pulses_blackgram.html",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            }
+          ],
+          "label": "example comparison, not a recommendation",
+          "display_note": null,
+          "evidence_status": "exploratory",
+          "decision_status": "provisional",
+          "validation_status": "ok",
+          "scores": {
+            "water": 46.67,
+            "soil_health": null,
+            "climate_resilience": 46.67,
+            "crop_suitability": null,
+            "economics": null
+          },
+          "overall": 46.67,
+          "score_label": "Partial illustrative comparison score",
+          "score_coverage": {
+            "available_components": [
+              "water",
+              "climate_resilience"
+            ],
+            "missing_components": [
+              "soil_health",
+              "crop_suitability",
+              "economics"
+            ],
+            "available_count": 2,
+            "total_count": 5
+          },
+          "score_note": "Illustrative team estimates only. Not a validated crop suitability score.",
+          "confidence": "low",
+          "risks": [],
+          "climate_risks": [
+            {
+              "crop_id": "rice",
+              "crop_name": "Rice",
+              "season_climate_indicators": {
+                "kharif": {
+                  "season": "kharif",
+                  "season_year": 2026,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -20.6,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "temperature_above_baseline",
+                      "observed_value": 0.84,
+                      "unit": "°C",
+                      "message": "Mean temperature was above its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 16,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    },
+                    {
+                      "indicator": "heat_days_above_normal",
+                      "observed_value": 29,
+                      "historical_normal": 27.1,
+                      "unit": "days",
+                      "message": "Heat days exceeded the historical normal."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                },
+                "rabi": {
+                  "season": "rabi",
+                  "season_year": 2025,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -6.59,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 60,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            },
+            {
+              "crop_id": "wheat",
+              "crop_name": "Wheat",
+              "season_climate_indicators": {
+                "rabi": {
+                  "season": "rabi",
+                  "season_year": 2025,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -6.59,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 60,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            },
+            {
+              "crop_id": "black_gram",
+              "crop_name": "Black gram",
+              "season_climate_indicators": {
+                "kharif": {
+                  "season": "kharif",
+                  "season_year": 2026,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -20.6,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "temperature_above_baseline",
+                      "observed_value": 0.84,
+                      "unit": "°C",
+                      "message": "Mean temperature was above its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 16,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    },
+                    {
+                      "indicator": "heat_days_above_normal",
+                      "observed_value": 29,
+                      "historical_normal": 27.1,
+                      "unit": "days",
+                      "message": "Heat days exceeded the historical normal."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                },
+                "summer": {
+                  "season": "summer",
+                  "season_year": 2026,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -5.43,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 18,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            }
+          ],
+          "missing_info": [
+            "rice: ph_range has not been verified.",
+            "rice: soil_ok has not been verified.",
+            "wheat: ph_range has not been verified.",
+            "wheat: soil_ok has not been verified.",
+            "black_gram: ph_range has not been verified.",
+            "black_gram: soil_ok has not been verified.",
+            "No soil_health score is currently available.",
+            "No crop_suitability score is currently available.",
+            "No economics score is currently available."
+          ],
+          "needs_expert_review": true,
+          "reject_reasons": [],
+          "sources": [
+            "NASA POWER Daily API"
+          ],
+          "explanations": {
+            "en": "Crop sequence: rice -> wheat -> black_gram\nCheck status: basic checks passed\nOverall score: 46.67\nConfidence: low\nExample comparison only, not a farming recommendation.\nInformation still needed:\n- rice: ph_range has not been verified.\n- rice: soil_ok has not been verified.\n- wheat: ph_range has not been verified.\n- wheat: soil_ok has not been verified.\n- black_gram: ph_range has not been verified.\nExploratory rotation: local agricultural verification is still required.\nExpert review is required before practical use.",
+            "hi": "फसल क्रम: धान → गेहूँ → उड़द\nजाँच स्थिति: प्रारंभिक जाँच पास\nकुल स्कोर: 46.67\nविश्वास स्तर: कम\nयह केवल उदाहरण तुलना है, खेती की सिफारिश नहीं।\nसत्यापन के लिए आवश्यक जानकारी:\n- धान: मिट्टी का pH स्तर सत्यापित नहीं है।\n- धान: मिट्टी की उपयुक्तता सत्यापित नहीं है।\n- गेहूँ: मिट्टी का pH स्तर सत्यापित नहीं है।\n- गेहूँ: मिट्टी की उपयुक्तता सत्यापित नहीं है।\n- उड़द: मिट्टी का pH स्तर सत्यापित नहीं है।\nइस फसल क्रम का स्थानीय कृषि स्रोतों से सत्यापन बाकी है।\nकृषि विशेषज्ञ की समीक्षा आवश्यक है।"
+          }
+        }
+      ]
+    },
+    "bihar_samastipur": {
+      "id": "bihar_samastipur",
+      "district": "Samastipur",
+      "state": "Bihar",
+      "coordinates": {
+        "latitude": 25.86,
+        "longitude": 85.78
+      },
+      "baseline_years": [
+        2016,
+        2025
+      ],
+      "season_data_quality": {
+        "kharif": {
+          "season_year": 2026,
+          "period_start": "2026-06-01",
+          "period_end": "2026-10-31",
+          "complete": true,
+          "missing_pct": {
+            "rain": 0.0,
+            "t_mean": 0.0,
+            "t_max": 0.0
+          }
+        },
+        "rabi": {
+          "season_year": 2025,
+          "period_start": "2025-11-01",
+          "period_end": "2026-04-30",
+          "complete": true,
+          "missing_pct": {
+            "rain": 0.0,
+            "t_mean": 0.0,
+            "t_max": 0.0
+          }
+        },
+        "summer": {
+          "season_year": 2026,
+          "period_start": "2026-03-01",
+          "period_end": "2026-06-30",
+          "complete": true,
+          "missing_pct": {
+            "rain": 0.0,
+            "t_mean": 0.0,
+            "t_max": 0.0
+          }
+        }
+      },
+      "latest_complete_seasons": {
+        "kharif": 2026,
+        "rabi": 2025,
+        "summer": 2026
+      },
+      "season_risk_indicators": {
+        "kharif": {
+          "season": "kharif",
+          "season_year": 2026,
+          "complete": true,
+          "climate_flags": [
+            {
+              "indicator": "rainfall_below_baseline",
+              "observed_value": -11.34,
+              "unit": "%",
+              "message": "Seasonal rainfall was below its historical baseline."
+            },
+            {
+              "indicator": "temperature_above_baseline",
+              "observed_value": 0.28,
+              "unit": "°C",
+              "message": "Mean temperature was above its historical baseline."
+            },
+            {
+              "indicator": "dry_spell_observed",
+              "observed_value": 18,
+              "unit": "days",
+              "message": "A consecutive dry spell was observed."
+            },
+            {
+              "indicator": "heat_days_above_normal",
+              "observed_value": 25,
+              "historical_normal": 14.8,
+              "unit": "days",
+              "message": "Heat days exceeded the historical normal."
+            }
+          ],
+          "needs_expert_review": true,
+          "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+        },
+        "rabi": {
+          "season": "rabi",
+          "season_year": 2025,
+          "complete": true,
+          "climate_flags": [
+            {
+              "indicator": "dry_spell_observed",
+              "observed_value": 138,
+              "unit": "days",
+              "message": "A consecutive dry spell was observed."
+            },
+            {
+              "indicator": "heat_days_above_normal",
+              "observed_value": 17,
+              "historical_normal": 16.9,
+              "unit": "days",
+              "message": "Heat days exceeded the historical normal."
+            }
+          ],
+          "needs_expert_review": true,
+          "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+        },
+        "summer": {
+          "season": "summer",
+          "season_year": 2026,
+          "complete": true,
+          "climate_flags": [
+            {
+              "indicator": "dry_spell_observed",
+              "observed_value": 19,
+              "unit": "days",
+              "message": "A consecutive dry spell was observed."
+            },
+            {
+              "indicator": "heat_days_above_normal",
+              "observed_value": 51,
+              "historical_normal": 48.9,
+              "unit": "days",
+              "message": "Heat days exceeded the historical normal."
+            }
+          ],
+          "needs_expert_review": true,
+          "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+        }
+      },
+      "rotations": [
+        {
+          "id": "base",
+          "type": "sequence",
+          "crops": [
+            "rice",
+            "wheat"
+          ],
+          "crop_evidence": [
+            {
+              "crop_id": "rice",
+              "crop_name": "rice",
+              "source_url": "https://agritech.tnau.ac.in/agriculture/agri_seasonandvarieties_rice.html",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            },
+            {
+              "crop_id": "wheat",
+              "crop_name": "wheat",
+              "source_url": "https://icar.org.in/sites/default/files/Circulars/India_BRICS_Agriculture_Report.pdf",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            }
+          ],
+          "label": "example comparison, not a recommendation",
+          "display_note": null,
+          "evidence_status": "pending_source_verification",
+          "decision_status": "provisional",
+          "validation_status": "ok",
+          "scores": {
+            "water": 30.0,
+            "soil_health": null,
+            "climate_resilience": 40.0,
+            "crop_suitability": null,
+            "economics": null
+          },
+          "overall": 34.0,
+          "score_label": "Partial illustrative comparison score",
+          "score_coverage": {
+            "available_components": [
+              "water",
+              "climate_resilience"
+            ],
+            "missing_components": [
+              "soil_health",
+              "crop_suitability",
+              "economics"
+            ],
+            "available_count": 2,
+            "total_count": 5
+          },
+          "score_note": "Illustrative team estimates only. Not a validated crop suitability score.",
+          "confidence": "low",
+          "risks": [],
+          "climate_risks": [
+            {
+              "crop_id": "rice",
+              "crop_name": "Rice",
+              "season_climate_indicators": {
+                "kharif": {
+                  "season": "kharif",
+                  "season_year": 2026,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -11.34,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "temperature_above_baseline",
+                      "observed_value": 0.28,
+                      "unit": "°C",
+                      "message": "Mean temperature was above its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 18,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    },
+                    {
+                      "indicator": "heat_days_above_normal",
+                      "observed_value": 25,
+                      "historical_normal": 14.8,
+                      "unit": "days",
+                      "message": "Heat days exceeded the historical normal."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                },
+                "rabi": {
+                  "season": "rabi",
+                  "season_year": 2025,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 138,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    },
+                    {
+                      "indicator": "heat_days_above_normal",
+                      "observed_value": 17,
+                      "historical_normal": 16.9,
+                      "unit": "days",
+                      "message": "Heat days exceeded the historical normal."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            },
+            {
+              "crop_id": "wheat",
+              "crop_name": "Wheat",
+              "season_climate_indicators": {
+                "rabi": {
+                  "season": "rabi",
+                  "season_year": 2025,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 138,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    },
+                    {
+                      "indicator": "heat_days_above_normal",
+                      "observed_value": 17,
+                      "historical_normal": 16.9,
+                      "unit": "days",
+                      "message": "Heat days exceeded the historical normal."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            }
+          ],
+          "missing_info": [
+            "rice: ph_range has not been verified.",
+            "rice: soil_ok has not been verified.",
+            "wheat: ph_range has not been verified.",
+            "wheat: soil_ok has not been verified.",
+            "No soil_health score is currently available.",
+            "No crop_suitability score is currently available.",
+            "No economics score is currently available."
+          ],
+          "needs_expert_review": true,
+          "reject_reasons": [],
+          "sources": [
+            "NASA POWER Daily API"
+          ],
+          "explanations": {
+            "en": "Crop sequence: rice -> wheat\nCheck status: basic checks passed\nOverall score: 34.0\nConfidence: low\nExample comparison only, not a farming recommendation.\nInformation still needed:\n- rice: ph_range has not been verified.\n- rice: soil_ok has not been verified.\n- wheat: ph_range has not been verified.\n- wheat: soil_ok has not been verified.\n- No soil_health score is currently available.\nExpert review is required before practical use.",
+            "hi": "फसल क्रम: धान → गेहूँ\nजाँच स्थिति: प्रारंभिक जाँच पास\nकुल स्कोर: 34.0\nविश्वास स्तर: कम\nयह केवल उदाहरण तुलना है, खेती की सिफारिश नहीं।\nसत्यापन के लिए आवश्यक जानकारी:\n- धान: मिट्टी का pH स्तर सत्यापित नहीं है।\n- धान: मिट्टी की उपयुक्तता सत्यापित नहीं है।\n- गेहूँ: मिट्टी का pH स्तर सत्यापित नहीं है।\n- गेहूँ: मिट्टी की उपयुक्तता सत्यापित नहीं है।\n- No soil_health score is currently available.\nकृषि विशेषज्ञ की समीक्षा आवश्यक है।"
+          }
+        },
+        {
+          "id": "alt1",
+          "type": "sequence",
+          "crops": [
+            "rice",
+            "mustard"
+          ],
+          "crop_evidence": [
+            {
+              "crop_id": "rice",
+              "crop_name": "rice",
+              "source_url": "https://agritech.tnau.ac.in/agriculture/agri_seasonandvarieties_rice.html",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            },
+            {
+              "crop_id": "mustard",
+              "crop_name": "mustard",
+              "source_url": "https://icar.org.in/sites/default/files/Circulars/India_BRICS_Agriculture_Report.pdf",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            }
+          ],
+          "label": "example comparison, not a recommendation",
+          "display_note": null,
+          "evidence_status": "exploratory",
+          "decision_status": "provisional",
+          "validation_status": "ok",
+          "scores": {
+            "water": 50.0,
+            "soil_health": null,
+            "climate_resilience": 60.0,
+            "crop_suitability": null,
+            "economics": null
+          },
+          "overall": 54.0,
+          "score_label": "Partial illustrative comparison score",
+          "score_coverage": {
+            "available_components": [
+              "water",
+              "climate_resilience"
+            ],
+            "missing_components": [
+              "soil_health",
+              "crop_suitability",
+              "economics"
+            ],
+            "available_count": 2,
+            "total_count": 5
+          },
+          "score_note": "Illustrative team estimates only. Not a validated crop suitability score.",
+          "confidence": "low",
+          "risks": [],
+          "climate_risks": [
+            {
+              "crop_id": "rice",
+              "crop_name": "Rice",
+              "season_climate_indicators": {
+                "kharif": {
+                  "season": "kharif",
+                  "season_year": 2026,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -11.34,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "temperature_above_baseline",
+                      "observed_value": 0.28,
+                      "unit": "°C",
+                      "message": "Mean temperature was above its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 18,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    },
+                    {
+                      "indicator": "heat_days_above_normal",
+                      "observed_value": 25,
+                      "historical_normal": 14.8,
+                      "unit": "days",
+                      "message": "Heat days exceeded the historical normal."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                },
+                "rabi": {
+                  "season": "rabi",
+                  "season_year": 2025,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 138,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    },
+                    {
+                      "indicator": "heat_days_above_normal",
+                      "observed_value": 17,
+                      "historical_normal": 16.9,
+                      "unit": "days",
+                      "message": "Heat days exceeded the historical normal."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            },
+            {
+              "crop_id": "mustard",
+              "crop_name": "Mustard",
+              "season_climate_indicators": {
+                "rabi": {
+                  "season": "rabi",
+                  "season_year": 2025,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 138,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    },
+                    {
+                      "indicator": "heat_days_above_normal",
+                      "observed_value": 17,
+                      "historical_normal": 16.9,
+                      "unit": "days",
+                      "message": "Heat days exceeded the historical normal."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            }
+          ],
+          "missing_info": [
+            "rice: ph_range has not been verified.",
+            "rice: soil_ok has not been verified.",
+            "mustard: ph_range has not been verified.",
+            "mustard: soil_ok has not been verified.",
+            "No soil_health score is currently available.",
+            "No crop_suitability score is currently available.",
+            "No economics score is currently available."
+          ],
+          "needs_expert_review": true,
+          "reject_reasons": [],
+          "sources": [
+            "NASA POWER Daily API"
+          ],
+          "explanations": {
+            "en": "Crop sequence: rice -> mustard\nCheck status: basic checks passed\nOverall score: 54.0\nConfidence: low\nExample comparison only, not a farming recommendation.\nInformation still needed:\n- rice: ph_range has not been verified.\n- rice: soil_ok has not been verified.\n- mustard: ph_range has not been verified.\n- mustard: soil_ok has not been verified.\n- No soil_health score is currently available.\nExploratory rotation: local agricultural verification is still required.\nExpert review is required before practical use.",
+            "hi": "फसल क्रम: धान → सरसों\nजाँच स्थिति: प्रारंभिक जाँच पास\nकुल स्कोर: 54.0\nविश्वास स्तर: कम\nयह केवल उदाहरण तुलना है, खेती की सिफारिश नहीं।\nसत्यापन के लिए आवश्यक जानकारी:\n- धान: मिट्टी का pH स्तर सत्यापित नहीं है।\n- धान: मिट्टी की उपयुक्तता सत्यापित नहीं है।\n- सरसों: मिट्टी का pH स्तर सत्यापित नहीं है।\n- सरसों: मिट्टी की उपयुक्तता सत्यापित नहीं है।\n- No soil_health score is currently available.\nइस फसल क्रम का स्थानीय कृषि स्रोतों से सत्यापन बाकी है।\nकृषि विशेषज्ञ की समीक्षा आवश्यक है।"
+          }
+        },
+        {
+          "id": "alt2",
+          "type": "sequence",
+          "crops": [
+            "maize",
+            "wheat"
+          ],
+          "crop_evidence": [
+            {
+              "crop_id": "maize",
+              "crop_name": "maize",
+              "source_url": "https://icar.org.in/sites/default/files/Circulars/India_BRICS_Agriculture_Report.pdf",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            },
+            {
+              "crop_id": "wheat",
+              "crop_name": "wheat",
+              "source_url": "https://icar.org.in/sites/default/files/Circulars/India_BRICS_Agriculture_Report.pdf",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            }
+          ],
+          "label": "example comparison, not a recommendation",
+          "display_note": null,
+          "evidence_status": "pending_source_verification",
+          "decision_status": "provisional",
+          "validation_status": "ok",
+          "scores": {
+            "water": 50.0,
+            "soil_health": null,
+            "climate_resilience": 40.0,
+            "crop_suitability": null,
+            "economics": null
+          },
+          "overall": 46.0,
+          "score_label": "Partial illustrative comparison score",
+          "score_coverage": {
+            "available_components": [
+              "water",
+              "climate_resilience"
+            ],
+            "missing_components": [
+              "soil_health",
+              "crop_suitability",
+              "economics"
+            ],
+            "available_count": 2,
+            "total_count": 5
+          },
+          "score_note": "Illustrative team estimates only. Not a validated crop suitability score.",
+          "confidence": "low",
+          "risks": [],
+          "climate_risks": [
+            {
+              "crop_id": "maize",
+              "crop_name": "Maize",
+              "season_climate_indicators": {
+                "kharif": {
+                  "season": "kharif",
+                  "season_year": 2026,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -11.34,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "temperature_above_baseline",
+                      "observed_value": 0.28,
+                      "unit": "°C",
+                      "message": "Mean temperature was above its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 18,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    },
+                    {
+                      "indicator": "heat_days_above_normal",
+                      "observed_value": 25,
+                      "historical_normal": 14.8,
+                      "unit": "days",
+                      "message": "Heat days exceeded the historical normal."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                },
+                "rabi": {
+                  "season": "rabi",
+                  "season_year": 2025,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 138,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    },
+                    {
+                      "indicator": "heat_days_above_normal",
+                      "observed_value": 17,
+                      "historical_normal": 16.9,
+                      "unit": "days",
+                      "message": "Heat days exceeded the historical normal."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            },
+            {
+              "crop_id": "wheat",
+              "crop_name": "Wheat",
+              "season_climate_indicators": {
+                "rabi": {
+                  "season": "rabi",
+                  "season_year": 2025,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 138,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    },
+                    {
+                      "indicator": "heat_days_above_normal",
+                      "observed_value": 17,
+                      "historical_normal": 16.9,
+                      "unit": "days",
+                      "message": "Heat days exceeded the historical normal."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            }
+          ],
+          "missing_info": [
+            "maize: ph_range has not been verified.",
+            "maize: soil_ok has not been verified.",
+            "wheat: ph_range has not been verified.",
+            "wheat: soil_ok has not been verified.",
+            "No soil_health score is currently available.",
+            "No crop_suitability score is currently available.",
+            "No economics score is currently available."
+          ],
+          "needs_expert_review": true,
+          "reject_reasons": [],
+          "sources": [
+            "NASA POWER Daily API"
+          ],
+          "explanations": {
+            "en": "Crop sequence: maize -> wheat\nCheck status: basic checks passed\nOverall score: 46.0\nConfidence: low\nExample comparison only, not a farming recommendation.\nInformation still needed:\n- maize: ph_range has not been verified.\n- maize: soil_ok has not been verified.\n- wheat: ph_range has not been verified.\n- wheat: soil_ok has not been verified.\n- No soil_health score is currently available.\nExpert review is required before practical use.",
+            "hi": "फसल क्रम: मक्का → गेहूँ\nजाँच स्थिति: प्रारंभिक जाँच पास\nकुल स्कोर: 46.0\nविश्वास स्तर: कम\nयह केवल उदाहरण तुलना है, खेती की सिफारिश नहीं।\nसत्यापन के लिए आवश्यक जानकारी:\n- मक्का: मिट्टी का pH स्तर सत्यापित नहीं है।\n- मक्का: मिट्टी की उपयुक्तता सत्यापित नहीं है।\n- गेहूँ: मिट्टी का pH स्तर सत्यापित नहीं है।\n- गेहूँ: मिट्टी की उपयुक्तता सत्यापित नहीं है।\n- No soil_health score is currently available.\nकृषि विशेषज्ञ की समीक्षा आवश्यक है।"
+          }
+        }
+      ]
+    },
+    "maharashtra_akola": {
+      "id": "maharashtra_akola",
+      "district": "Akola",
+      "state": "Maharashtra",
+      "coordinates": {
+        "latitude": 20.71,
+        "longitude": 77.0
+      },
+      "baseline_years": [
+        2016,
+        2025
+      ],
+      "season_data_quality": {
+        "kharif": {
+          "season_year": 2026,
+          "period_start": "2026-06-01",
+          "period_end": "2026-10-31",
+          "complete": true,
+          "missing_pct": {
+            "rain": 0.0,
+            "t_mean": 0.0,
+            "t_max": 0.0
+          }
+        },
+        "rabi": {
+          "season_year": 2025,
+          "period_start": "2025-11-01",
+          "period_end": "2026-04-30",
+          "complete": true,
+          "missing_pct": {
+            "rain": 0.0,
+            "t_mean": 0.0,
+            "t_max": 0.0
+          }
+        },
+        "summer": {
+          "season_year": 2026,
+          "period_start": "2026-03-01",
+          "period_end": "2026-06-30",
+          "complete": true,
+          "missing_pct": {
+            "rain": 0.0,
+            "t_mean": 0.0,
+            "t_max": 0.0
+          }
+        }
+      },
+      "latest_complete_seasons": {
+        "kharif": 2026,
+        "rabi": 2025,
+        "summer": 2026
+      },
+      "season_risk_indicators": {
+        "kharif": {
+          "season": "kharif",
+          "season_year": 2026,
+          "complete": true,
+          "climate_flags": [
+            {
+              "indicator": "rainfall_below_baseline",
+              "observed_value": -40.8,
+              "unit": "%",
+              "message": "Seasonal rainfall was below its historical baseline."
+            },
+            {
+              "indicator": "temperature_above_baseline",
+              "observed_value": 0.89,
+              "unit": "°C",
+              "message": "Mean temperature was above its historical baseline."
+            },
+            {
+              "indicator": "dry_spell_observed",
+              "observed_value": 32,
+              "unit": "days",
+              "message": "A consecutive dry spell was observed."
+            },
+            {
+              "indicator": "heat_days_above_normal",
+              "observed_value": 9,
+              "historical_normal": 5.3,
+              "unit": "days",
+              "message": "Heat days exceeded the historical normal."
+            }
+          ],
+          "needs_expert_review": true,
+          "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+        },
+        "rabi": {
+          "season": "rabi",
+          "season_year": 2025,
+          "complete": true,
+          "climate_flags": [
+            {
+              "indicator": "rainfall_below_baseline",
+              "observed_value": -34.61,
+              "unit": "%",
+              "message": "Seasonal rainfall was below its historical baseline."
+            },
+            {
+              "indicator": "dry_spell_observed",
+              "observed_value": 63,
+              "unit": "days",
+              "message": "A consecutive dry spell was observed."
+            }
+          ],
+          "needs_expert_review": true,
+          "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+        },
+        "summer": {
+          "season": "summer",
+          "season_year": 2026,
+          "complete": true,
+          "climate_flags": [
+            {
+              "indicator": "rainfall_below_baseline",
+              "observed_value": -21.32,
+              "unit": "%",
+              "message": "Seasonal rainfall was below its historical baseline."
+            },
+            {
+              "indicator": "temperature_above_baseline",
+              "observed_value": 1.08,
+              "unit": "°C",
+              "message": "Mean temperature was above its historical baseline."
+            },
+            {
+              "indicator": "dry_spell_observed",
+              "observed_value": 33,
+              "unit": "days",
+              "message": "A consecutive dry spell was observed."
+            },
+            {
+              "indicator": "heat_days_above_normal",
+              "observed_value": 67,
+              "historical_normal": 61.1,
+              "unit": "days",
+              "message": "Heat days exceeded the historical normal."
+            }
+          ],
+          "needs_expert_review": true,
+          "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+        }
+      },
+      "rotations": [
+        {
+          "id": "base",
+          "type": "sequence",
+          "crops": [
+            "soybean",
+            "chickpea"
+          ],
+          "crop_evidence": [
+            {
+              "crop_id": "soybean",
+              "crop_name": "soybean",
+              "source_url": "https://icar.org.in/sites/default/files/Circulars/India_BRICS_Agriculture_Report.pdf",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            },
+            {
+              "crop_id": "chickpea",
+              "crop_name": "chickpea",
+              "source_url": "https://plantauthority.gov.in/seed-planting-material-requirement",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            }
+          ],
+          "label": "example comparison, not a recommendation",
+          "display_note": null,
+          "evidence_status": "pending_source_verification",
+          "decision_status": "provisional",
+          "validation_status": "ok",
+          "scores": {
+            "water": 70.0,
+            "soil_health": null,
+            "climate_resilience": 75.0,
+            "crop_suitability": null,
+            "economics": null
+          },
+          "overall": 72.0,
+          "score_label": "Partial illustrative comparison score",
+          "score_coverage": {
+            "available_components": [
+              "water",
+              "climate_resilience"
+            ],
+            "missing_components": [
+              "soil_health",
+              "crop_suitability",
+              "economics"
+            ],
+            "available_count": 2,
+            "total_count": 5
+          },
+          "score_note": "Illustrative team estimates only. Not a validated crop suitability score.",
+          "confidence": "low",
+          "risks": [],
+          "climate_risks": [
+            {
+              "crop_id": "soybean",
+              "crop_name": "Soybean",
+              "season_climate_indicators": {
+                "kharif": {
+                  "season": "kharif",
+                  "season_year": 2026,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -40.8,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "temperature_above_baseline",
+                      "observed_value": 0.89,
+                      "unit": "°C",
+                      "message": "Mean temperature was above its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 32,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    },
+                    {
+                      "indicator": "heat_days_above_normal",
+                      "observed_value": 9,
+                      "historical_normal": 5.3,
+                      "unit": "days",
+                      "message": "Heat days exceeded the historical normal."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            },
+            {
+              "crop_id": "chickpea",
+              "crop_name": "Chickpea",
+              "season_climate_indicators": {
+                "rabi": {
+                  "season": "rabi",
+                  "season_year": 2025,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -34.61,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 63,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            }
+          ],
+          "missing_info": [
+            "soybean: ph_range has not been verified.",
+            "soybean: soil_ok has not been verified.",
+            "chickpea: ph_range has not been verified.",
+            "chickpea: soil_ok has not been verified.",
+            "No soil_health score is currently available.",
+            "No crop_suitability score is currently available.",
+            "No economics score is currently available."
+          ],
+          "needs_expert_review": true,
+          "reject_reasons": [],
+          "sources": [
+            "NASA POWER Daily API"
+          ],
+          "explanations": {
+            "en": "Crop sequence: soybean -> chickpea\nCheck status: basic checks passed\nOverall score: 72.0\nConfidence: low\nExample comparison only, not a farming recommendation.\nInformation still needed:\n- soybean: ph_range has not been verified.\n- soybean: soil_ok has not been verified.\n- chickpea: ph_range has not been verified.\n- chickpea: soil_ok has not been verified.\n- No soil_health score is currently available.\nExpert review is required before practical use.",
+            "hi": "फसल क्रम: सोयाबीन → चना\nजाँच स्थिति: प्रारंभिक जाँच पास\nकुल स्कोर: 72.0\nविश्वास स्तर: कम\nयह केवल उदाहरण तुलना है, खेती की सिफारिश नहीं।\nसत्यापन के लिए आवश्यक जानकारी:\n- सोयाबीन: मिट्टी का pH स्तर सत्यापित नहीं है।\n- सोयाबीन: मिट्टी की उपयुक्तता सत्यापित नहीं है।\n- चना: मिट्टी का pH स्तर सत्यापित नहीं है।\n- चना: मिट्टी की उपयुक्तता सत्यापित नहीं है।\n- No soil_health score is currently available.\nकृषि विशेषज्ञ की समीक्षा आवश्यक है।"
+          }
+        },
+        {
+          "id": "alt1",
+          "type": "intercrop",
+          "crops": [
+            "cotton",
+            "soybean"
+          ],
+          "crop_evidence": [
+            {
+              "crop_id": "cotton",
+              "crop_name": "cotton",
+              "source_url": "https://icar.org.in/sites/default/files/Circulars/India_BRICS_Agriculture_Report.pdf",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            },
+            {
+              "crop_id": "soybean",
+              "crop_name": "soybean",
+              "source_url": "https://icar.org.in/sites/default/files/Circulars/India_BRICS_Agriculture_Report.pdf",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            }
+          ],
+          "label": "example comparison, not a recommendation",
+          "display_note": null,
+          "evidence_status": "pending_source_verification",
+          "decision_status": "provisional",
+          "validation_status": "ok",
+          "scores": {
+            "water": 60.0,
+            "soil_health": null,
+            "climate_resilience": 70.0,
+            "crop_suitability": null,
+            "economics": null
+          },
+          "overall": 64.0,
+          "score_label": "Partial illustrative comparison score",
+          "score_coverage": {
+            "available_components": [
+              "water",
+              "climate_resilience"
+            ],
+            "missing_components": [
+              "soil_health",
+              "crop_suitability",
+              "economics"
+            ],
+            "available_count": 2,
+            "total_count": 5
+          },
+          "score_note": "Illustrative team estimates only. Not a validated crop suitability score.",
+          "confidence": "low",
+          "risks": [],
+          "climate_risks": [
+            {
+              "crop_id": "cotton",
+              "crop_name": "Cotton",
+              "season_climate_indicators": {
+                "kharif": {
+                  "season": "kharif",
+                  "season_year": 2026,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -40.8,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "temperature_above_baseline",
+                      "observed_value": 0.89,
+                      "unit": "°C",
+                      "message": "Mean temperature was above its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 32,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    },
+                    {
+                      "indicator": "heat_days_above_normal",
+                      "observed_value": 9,
+                      "historical_normal": 5.3,
+                      "unit": "days",
+                      "message": "Heat days exceeded the historical normal."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            },
+            {
+              "crop_id": "soybean",
+              "crop_name": "Soybean",
+              "season_climate_indicators": {
+                "kharif": {
+                  "season": "kharif",
+                  "season_year": 2026,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -40.8,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "temperature_above_baseline",
+                      "observed_value": 0.89,
+                      "unit": "°C",
+                      "message": "Mean temperature was above its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 32,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    },
+                    {
+                      "indicator": "heat_days_above_normal",
+                      "observed_value": 9,
+                      "historical_normal": 5.3,
+                      "unit": "days",
+                      "message": "Heat days exceeded the historical normal."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            }
+          ],
+          "missing_info": [
+            "cotton: ph_range has not been verified.",
+            "cotton: soil_ok has not been verified.",
+            "soybean: ph_range has not been verified.",
+            "soybean: soil_ok has not been verified.",
+            "No soil_health score is currently available.",
+            "No crop_suitability score is currently available.",
+            "No economics score is currently available."
+          ],
+          "needs_expert_review": true,
+          "reject_reasons": [],
+          "sources": [
+            "NASA POWER Daily API"
+          ],
+          "explanations": {
+            "en": "Crop sequence: cotton -> soybean\nCheck status: basic checks passed\nOverall score: 64.0\nConfidence: low\nExample comparison only, not a farming recommendation.\nInformation still needed:\n- cotton: ph_range has not been verified.\n- cotton: soil_ok has not been verified.\n- soybean: ph_range has not been verified.\n- soybean: soil_ok has not been verified.\n- No soil_health score is currently available.\nExpert review is required before practical use.",
+            "hi": "फसल क्रम: कपास → सोयाबीन\nजाँच स्थिति: प्रारंभिक जाँच पास\nकुल स्कोर: 64.0\nविश्वास स्तर: कम\nयह केवल उदाहरण तुलना है, खेती की सिफारिश नहीं।\nसत्यापन के लिए आवश्यक जानकारी:\n- कपास: मिट्टी का pH स्तर सत्यापित नहीं है।\n- कपास: मिट्टी की उपयुक्तता सत्यापित नहीं है।\n- सोयाबीन: मिट्टी का pH स्तर सत्यापित नहीं है।\n- सोयाबीन: मिट्टी की उपयुक्तता सत्यापित नहीं है।\n- No soil_health score is currently available.\nकृषि विशेषज्ञ की समीक्षा आवश्यक है।"
+          }
+        },
+        {
+          "id": "alt2",
+          "type": "sequence",
+          "crops": [
+            "soybean",
+            "mustard"
+          ],
+          "crop_evidence": [
+            {
+              "crop_id": "soybean",
+              "crop_name": "soybean",
+              "source_url": "https://icar.org.in/sites/default/files/Circulars/India_BRICS_Agriculture_Report.pdf",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            },
+            {
+              "crop_id": "mustard",
+              "crop_name": "mustard",
+              "source_url": "https://icar.org.in/sites/default/files/Circulars/India_BRICS_Agriculture_Report.pdf",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            }
+          ],
+          "label": "example comparison, not a recommendation",
+          "display_note": null,
+          "evidence_status": "exploratory",
+          "decision_status": "provisional",
+          "validation_status": "ok",
+          "scores": {
+            "water": 70.0,
+            "soil_health": null,
+            "climate_resilience": 70.0,
+            "crop_suitability": null,
+            "economics": null
+          },
+          "overall": 70.0,
+          "score_label": "Partial illustrative comparison score",
+          "score_coverage": {
+            "available_components": [
+              "water",
+              "climate_resilience"
+            ],
+            "missing_components": [
+              "soil_health",
+              "crop_suitability",
+              "economics"
+            ],
+            "available_count": 2,
+            "total_count": 5
+          },
+          "score_note": "Illustrative team estimates only. Not a validated crop suitability score.",
+          "confidence": "low",
+          "risks": [],
+          "climate_risks": [
+            {
+              "crop_id": "soybean",
+              "crop_name": "Soybean",
+              "season_climate_indicators": {
+                "kharif": {
+                  "season": "kharif",
+                  "season_year": 2026,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -40.8,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "temperature_above_baseline",
+                      "observed_value": 0.89,
+                      "unit": "°C",
+                      "message": "Mean temperature was above its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 32,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    },
+                    {
+                      "indicator": "heat_days_above_normal",
+                      "observed_value": 9,
+                      "historical_normal": 5.3,
+                      "unit": "days",
+                      "message": "Heat days exceeded the historical normal."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            },
+            {
+              "crop_id": "mustard",
+              "crop_name": "Mustard",
+              "season_climate_indicators": {
+                "rabi": {
+                  "season": "rabi",
+                  "season_year": 2025,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -34.61,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 63,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            }
+          ],
+          "missing_info": [
+            "soybean: ph_range has not been verified.",
+            "soybean: soil_ok has not been verified.",
+            "mustard: ph_range has not been verified.",
+            "mustard: soil_ok has not been verified.",
+            "No soil_health score is currently available.",
+            "No crop_suitability score is currently available.",
+            "No economics score is currently available."
+          ],
+          "needs_expert_review": true,
+          "reject_reasons": [],
+          "sources": [
+            "NASA POWER Daily API"
+          ],
+          "explanations": {
+            "en": "Crop sequence: soybean -> mustard\nCheck status: basic checks passed\nOverall score: 70.0\nConfidence: low\nExample comparison only, not a farming recommendation.\nInformation still needed:\n- soybean: ph_range has not been verified.\n- soybean: soil_ok has not been verified.\n- mustard: ph_range has not been verified.\n- mustard: soil_ok has not been verified.\n- No soil_health score is currently available.\nExploratory rotation: local agricultural verification is still required.\nExpert review is required before practical use.",
+            "hi": "फसल क्रम: सोयाबीन → सरसों\nजाँच स्थिति: प्रारंभिक जाँच पास\nकुल स्कोर: 70.0\nविश्वास स्तर: कम\nयह केवल उदाहरण तुलना है, खेती की सिफारिश नहीं।\nसत्यापन के लिए आवश्यक जानकारी:\n- सोयाबीन: मिट्टी का pH स्तर सत्यापित नहीं है।\n- सोयाबीन: मिट्टी की उपयुक्तता सत्यापित नहीं है।\n- सरसों: मिट्टी का pH स्तर सत्यापित नहीं है।\n- सरसों: मिट्टी की उपयुक्तता सत्यापित नहीं है।\n- No soil_health score is currently available.\nइस फसल क्रम का स्थानीय कृषि स्रोतों से सत्यापन बाकी है।\nकृषि विशेषज्ञ की समीक्षा आवश्यक है।"
+          }
+        }
+      ]
+    },
+    "tamilnadu_thanjavur": {
+      "id": "tamilnadu_thanjavur",
+      "district": "Thanjavur",
+      "state": "Tamil Nadu",
+      "coordinates": {
+        "latitude": 10.79,
+        "longitude": 79.14
+      },
+      "baseline_years": [
+        2016,
+        2025
+      ],
+      "season_data_quality": {
+        "kharif": {
+          "season_year": 2026,
+          "period_start": "2026-06-01",
+          "period_end": "2026-10-31",
+          "complete": true,
+          "missing_pct": {
+            "rain": 0.0,
+            "t_mean": 0.0,
+            "t_max": 0.0
+          }
+        },
+        "rabi": {
+          "season_year": 2025,
+          "period_start": "2025-11-01",
+          "period_end": "2026-02-28",
+          "complete": true,
+          "missing_pct": {
+            "rain": 0.0,
+            "t_mean": 0.0,
+            "t_max": 0.0
+          }
+        },
+        "summer": {
+          "season_year": 2026,
+          "period_start": "2026-03-01",
+          "period_end": "2026-05-31",
+          "complete": true,
+          "missing_pct": {
+            "rain": 0.0,
+            "t_mean": 0.0,
+            "t_max": 0.0
+          }
+        }
+      },
+      "latest_complete_seasons": {
+        "kharif": 2026,
+        "rabi": 2025,
+        "summer": 2026
+      },
+      "season_risk_indicators": {
+        "kharif": {
+          "season": "kharif",
+          "season_year": 2026,
+          "complete": true,
+          "climate_flags": [
+            {
+              "indicator": "rainfall_below_baseline",
+              "observed_value": -2.33,
+              "unit": "%",
+              "message": "Seasonal rainfall was below its historical baseline."
+            },
+            {
+              "indicator": "temperature_above_baseline",
+              "observed_value": 1.23,
+              "unit": "°C",
+              "message": "Mean temperature was above its historical baseline."
+            },
+            {
+              "indicator": "dry_spell_observed",
+              "observed_value": 12,
+              "unit": "days",
+              "message": "A consecutive dry spell was observed."
+            },
+            {
+              "indicator": "heat_days_above_normal",
+              "observed_value": 2,
+              "historical_normal": 0.6,
+              "unit": "days",
+              "message": "Heat days exceeded the historical normal."
+            }
+          ],
+          "needs_expert_review": true,
+          "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+        },
+        "rabi": {
+          "season": "rabi",
+          "season_year": 2025,
+          "complete": true,
+          "climate_flags": [
+            {
+              "indicator": "rainfall_below_baseline",
+              "observed_value": -12.34,
+              "unit": "%",
+              "message": "Seasonal rainfall was below its historical baseline."
+            },
+            {
+              "indicator": "dry_spell_observed",
+              "observed_value": 23,
+              "unit": "days",
+              "message": "A consecutive dry spell was observed."
+            }
+          ],
+          "needs_expert_review": true,
+          "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+        },
+        "summer": {
+          "season": "summer",
+          "season_year": 2026,
+          "complete": true,
+          "climate_flags": [
+            {
+              "indicator": "dry_spell_observed",
+              "observed_value": 25,
+              "unit": "days",
+              "message": "A consecutive dry spell was observed."
+            }
+          ],
+          "needs_expert_review": true,
+          "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+        }
+      },
+      "rotations": [
+        {
+          "id": "base",
+          "type": "sequence",
+          "crops": [
+            "rice",
+            "rice"
+          ],
+          "crop_evidence": [
+            {
+              "crop_id": "rice",
+              "crop_name": "rice",
+              "source_url": "https://agritech.tnau.ac.in/agriculture/agri_seasonandvarieties_rice.html",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            },
+            {
+              "crop_id": "rice",
+              "crop_name": "rice",
+              "source_url": "https://agritech.tnau.ac.in/agriculture/agri_seasonandvarieties_rice.html",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            }
+          ],
+          "label": "example comparison, not a recommendation",
+          "display_note": "Represents two rice seasons in the year.",
+          "evidence_status": "pending_source_verification",
+          "decision_status": "provisional",
+          "validation_status": "ok",
+          "scores": {
+            "water": 20.0,
+            "soil_health": null,
+            "climate_resilience": 50.0,
+            "crop_suitability": null,
+            "economics": null
+          },
+          "overall": 32.0,
+          "score_label": "Partial illustrative comparison score",
+          "score_coverage": {
+            "available_components": [
+              "water",
+              "climate_resilience"
+            ],
+            "missing_components": [
+              "soil_health",
+              "crop_suitability",
+              "economics"
+            ],
+            "available_count": 2,
+            "total_count": 5
+          },
+          "score_note": "Illustrative team estimates only. Not a validated crop suitability score.",
+          "confidence": "low",
+          "risks": [],
+          "climate_risks": [
+            {
+              "crop_id": "rice",
+              "crop_name": "Rice",
+              "season_climate_indicators": {
+                "kharif": {
+                  "season": "kharif",
+                  "season_year": 2026,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -2.33,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "temperature_above_baseline",
+                      "observed_value": 1.23,
+                      "unit": "°C",
+                      "message": "Mean temperature was above its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 12,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    },
+                    {
+                      "indicator": "heat_days_above_normal",
+                      "observed_value": 2,
+                      "historical_normal": 0.6,
+                      "unit": "days",
+                      "message": "Heat days exceeded the historical normal."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                },
+                "rabi": {
+                  "season": "rabi",
+                  "season_year": 2025,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -12.34,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 23,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            },
+            {
+              "crop_id": "rice",
+              "crop_name": "Rice",
+              "season_climate_indicators": {
+                "kharif": {
+                  "season": "kharif",
+                  "season_year": 2026,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -2.33,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "temperature_above_baseline",
+                      "observed_value": 1.23,
+                      "unit": "°C",
+                      "message": "Mean temperature was above its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 12,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    },
+                    {
+                      "indicator": "heat_days_above_normal",
+                      "observed_value": 2,
+                      "historical_normal": 0.6,
+                      "unit": "days",
+                      "message": "Heat days exceeded the historical normal."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                },
+                "rabi": {
+                  "season": "rabi",
+                  "season_year": 2025,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -12.34,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 23,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            }
+          ],
+          "missing_info": [
+            "rice: ph_range has not been verified.",
+            "rice: soil_ok has not been verified.",
+            "rice: ph_range has not been verified.",
+            "rice: soil_ok has not been verified.",
+            "No soil_health score is currently available.",
+            "No crop_suitability score is currently available.",
+            "No economics score is currently available."
+          ],
+          "needs_expert_review": true,
+          "reject_reasons": [],
+          "sources": [
+            "NASA POWER Daily API"
+          ],
+          "explanations": {
+            "en": "Crop sequence: rice -> rice\nCheck status: basic checks passed\nOverall score: 32.0\nConfidence: low\nExample comparison only, not a farming recommendation.\nInformation still needed:\n- rice: ph_range has not been verified.\n- rice: soil_ok has not been verified.\n- rice: ph_range has not been verified.\n- rice: soil_ok has not been verified.\n- No soil_health score is currently available.\nExpert review is required before practical use.",
+            "hi": "फसल क्रम: धान → धान\nजाँच स्थिति: प्रारंभिक जाँच पास\nकुल स्कोर: 32.0\nविश्वास स्तर: कम\nयह केवल उदाहरण तुलना है, खेती की सिफारिश नहीं।\nसत्यापन के लिए आवश्यक जानकारी:\n- धान: मिट्टी का pH स्तर सत्यापित नहीं है।\n- धान: मिट्टी की उपयुक्तता सत्यापित नहीं है।\n- धान: मिट्टी का pH स्तर सत्यापित नहीं है।\n- धान: मिट्टी की उपयुक्तता सत्यापित नहीं है।\n- No soil_health score is currently available.\nकृषि विशेषज्ञ की समीक्षा आवश्यक है।"
+          }
+        },
+        {
+          "id": "alt1",
+          "type": "sequence",
+          "crops": [
+            "rice",
+            "black_gram"
+          ],
+          "crop_evidence": [
+            {
+              "crop_id": "rice",
+              "crop_name": "rice",
+              "source_url": "https://agritech.tnau.ac.in/agriculture/agri_seasonandvarieties_rice.html",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            },
+            {
+              "crop_id": "black_gram",
+              "crop_name": "black_gram",
+              "source_url": "https://agritech.tnau.ac.in/agriculture/CropProduction/Pulses/pulses_blackgram.html",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            }
+          ],
+          "label": "example comparison, not a recommendation",
+          "display_note": null,
+          "evidence_status": "pending_source_verification",
+          "decision_status": "provisional",
+          "validation_status": "ok",
+          "scores": {
+            "water": 50.0,
+            "soil_health": null,
+            "climate_resilience": 55.0,
+            "crop_suitability": null,
+            "economics": null
+          },
+          "overall": 52.0,
+          "score_label": "Partial illustrative comparison score",
+          "score_coverage": {
+            "available_components": [
+              "water",
+              "climate_resilience"
+            ],
+            "missing_components": [
+              "soil_health",
+              "crop_suitability",
+              "economics"
+            ],
+            "available_count": 2,
+            "total_count": 5
+          },
+          "score_note": "Illustrative team estimates only. Not a validated crop suitability score.",
+          "confidence": "low",
+          "risks": [],
+          "climate_risks": [
+            {
+              "crop_id": "rice",
+              "crop_name": "Rice",
+              "season_climate_indicators": {
+                "kharif": {
+                  "season": "kharif",
+                  "season_year": 2026,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -2.33,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "temperature_above_baseline",
+                      "observed_value": 1.23,
+                      "unit": "°C",
+                      "message": "Mean temperature was above its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 12,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    },
+                    {
+                      "indicator": "heat_days_above_normal",
+                      "observed_value": 2,
+                      "historical_normal": 0.6,
+                      "unit": "days",
+                      "message": "Heat days exceeded the historical normal."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                },
+                "rabi": {
+                  "season": "rabi",
+                  "season_year": 2025,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -12.34,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 23,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            },
+            {
+              "crop_id": "black_gram",
+              "crop_name": "Black gram",
+              "season_climate_indicators": {
+                "kharif": {
+                  "season": "kharif",
+                  "season_year": 2026,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -2.33,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "temperature_above_baseline",
+                      "observed_value": 1.23,
+                      "unit": "°C",
+                      "message": "Mean temperature was above its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 12,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    },
+                    {
+                      "indicator": "heat_days_above_normal",
+                      "observed_value": 2,
+                      "historical_normal": 0.6,
+                      "unit": "days",
+                      "message": "Heat days exceeded the historical normal."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                },
+                "summer": {
+                  "season": "summer",
+                  "season_year": 2026,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 25,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            }
+          ],
+          "missing_info": [
+            "rice: ph_range has not been verified.",
+            "rice: soil_ok has not been verified.",
+            "black_gram: ph_range has not been verified.",
+            "black_gram: soil_ok has not been verified.",
+            "No soil_health score is currently available.",
+            "No crop_suitability score is currently available.",
+            "No economics score is currently available."
+          ],
+          "needs_expert_review": true,
+          "reject_reasons": [],
+          "sources": [
+            "NASA POWER Daily API"
+          ],
+          "explanations": {
+            "en": "Crop sequence: rice -> black_gram\nCheck status: basic checks passed\nOverall score: 52.0\nConfidence: low\nExample comparison only, not a farming recommendation.\nInformation still needed:\n- rice: ph_range has not been verified.\n- rice: soil_ok has not been verified.\n- black_gram: ph_range has not been verified.\n- black_gram: soil_ok has not been verified.\n- No soil_health score is currently available.\nExpert review is required before practical use.",
+            "hi": "फसल क्रम: धान → उड़द\nजाँच स्थिति: प्रारंभिक जाँच पास\nकुल स्कोर: 52.0\nविश्वास स्तर: कम\nयह केवल उदाहरण तुलना है, खेती की सिफारिश नहीं।\nसत्यापन के लिए आवश्यक जानकारी:\n- धान: मिट्टी का pH स्तर सत्यापित नहीं है।\n- धान: मिट्टी की उपयुक्तता सत्यापित नहीं है।\n- उड़द: मिट्टी का pH स्तर सत्यापित नहीं है।\n- उड़द: मिट्टी की उपयुक्तता सत्यापित नहीं है।\n- No soil_health score is currently available.\nकृषि विशेषज्ञ की समीक्षा आवश्यक है।"
+          }
+        },
+        {
+          "id": "alt2",
+          "type": "sequence",
+          "crops": [
+            "rice",
+            "rice",
+            "sesame"
+          ],
+          "crop_evidence": [
+            {
+              "crop_id": "rice",
+              "crop_name": "rice",
+              "source_url": "https://agritech.tnau.ac.in/agriculture/agri_seasonandvarieties_rice.html",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            },
+            {
+              "crop_id": "rice",
+              "crop_name": "rice",
+              "source_url": "https://agritech.tnau.ac.in/agriculture/agri_seasonandvarieties_rice.html",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            },
+            {
+              "crop_id": "sesame",
+              "crop_name": "sesame",
+              "source_url": "https://icar.org.in/sites/default/files/Circulars/India_BRICS_Agriculture_Report.pdf",
+              "ratings": {
+                "water_need": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "heat_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "drought_tolerance": {
+                  "classification": "team_estimate",
+                  "note": "Illustrative comparative rating; requires agricultural source verification."
+                },
+                "nitrogen_fixing": {
+                  "classification": "pending_source_verification",
+                  "note": "Existing biological classification retained; supporting source verification pending."
+                }
+              }
+            }
+          ],
+          "label": "example comparison, not a recommendation",
+          "display_note": null,
+          "evidence_status": "exploratory",
+          "decision_status": "provisional",
+          "validation_status": "ok",
+          "scores": {
+            "water": 46.67,
+            "soil_health": null,
+            "climate_resilience": 60.0,
+            "crop_suitability": null,
+            "economics": null
+          },
+          "overall": 52.0,
+          "score_label": "Partial illustrative comparison score",
+          "score_coverage": {
+            "available_components": [
+              "water",
+              "climate_resilience"
+            ],
+            "missing_components": [
+              "soil_health",
+              "crop_suitability",
+              "economics"
+            ],
+            "available_count": 2,
+            "total_count": 5
+          },
+          "score_note": "Illustrative team estimates only. Not a validated crop suitability score.",
+          "confidence": "low",
+          "risks": [],
+          "climate_risks": [
+            {
+              "crop_id": "rice",
+              "crop_name": "Rice",
+              "season_climate_indicators": {
+                "kharif": {
+                  "season": "kharif",
+                  "season_year": 2026,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -2.33,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "temperature_above_baseline",
+                      "observed_value": 1.23,
+                      "unit": "°C",
+                      "message": "Mean temperature was above its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 12,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    },
+                    {
+                      "indicator": "heat_days_above_normal",
+                      "observed_value": 2,
+                      "historical_normal": 0.6,
+                      "unit": "days",
+                      "message": "Heat days exceeded the historical normal."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                },
+                "rabi": {
+                  "season": "rabi",
+                  "season_year": 2025,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -12.34,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 23,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            },
+            {
+              "crop_id": "rice",
+              "crop_name": "Rice",
+              "season_climate_indicators": {
+                "kharif": {
+                  "season": "kharif",
+                  "season_year": 2026,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -2.33,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "temperature_above_baseline",
+                      "observed_value": 1.23,
+                      "unit": "°C",
+                      "message": "Mean temperature was above its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 12,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    },
+                    {
+                      "indicator": "heat_days_above_normal",
+                      "observed_value": 2,
+                      "historical_normal": 0.6,
+                      "unit": "days",
+                      "message": "Heat days exceeded the historical normal."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                },
+                "rabi": {
+                  "season": "rabi",
+                  "season_year": 2025,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -12.34,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 23,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            },
+            {
+              "crop_id": "sesame",
+              "crop_name": "Sesame",
+              "season_climate_indicators": {
+                "kharif": {
+                  "season": "kharif",
+                  "season_year": 2026,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "rainfall_below_baseline",
+                      "observed_value": -2.33,
+                      "unit": "%",
+                      "message": "Seasonal rainfall was below its historical baseline."
+                    },
+                    {
+                      "indicator": "temperature_above_baseline",
+                      "observed_value": 1.23,
+                      "unit": "°C",
+                      "message": "Mean temperature was above its historical baseline."
+                    },
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 12,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    },
+                    {
+                      "indicator": "heat_days_above_normal",
+                      "observed_value": 2,
+                      "historical_normal": 0.6,
+                      "unit": "days",
+                      "message": "Heat days exceeded the historical normal."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                },
+                "summer": {
+                  "season": "summer",
+                  "season_year": 2026,
+                  "complete": true,
+                  "climate_flags": [
+                    {
+                      "indicator": "dry_spell_observed",
+                      "observed_value": 25,
+                      "unit": "days",
+                      "message": "A consecutive dry spell was observed."
+                    }
+                  ],
+                  "needs_expert_review": true,
+                  "interpretation_note": "These indicators describe observed climate conditions. They do not establish crop suitability or predict yield."
+                }
+              }
+            }
+          ],
+          "missing_info": [
+            "rice: ph_range has not been verified.",
+            "rice: soil_ok has not been verified.",
+            "rice: ph_range has not been verified.",
+            "rice: soil_ok has not been verified.",
+            "sesame: ph_range has not been verified.",
+            "sesame: soil_ok has not been verified.",
+            "No soil_health score is currently available.",
+            "No crop_suitability score is currently available.",
+            "No economics score is currently available."
+          ],
+          "needs_expert_review": true,
+          "reject_reasons": [],
+          "sources": [
+            "NASA POWER Daily API"
+          ],
+          "explanations": {
+            "en": "Crop sequence: rice -> rice -> sesame\nCheck status: basic checks passed\nOverall score: 52.0\nConfidence: low\nExample comparison only, not a farming recommendation.\nInformation still needed:\n- rice: ph_range has not been verified.\n- rice: soil_ok has not been verified.\n- rice: ph_range has not been verified.\n- rice: soil_ok has not been verified.\n- sesame: ph_range has not been verified.\nExploratory rotation: local agricultural verification is still required.\nExpert review is required before practical use.",
+            "hi": "फसल क्रम: धान → धान → तिल\nजाँच स्थिति: प्रारंभिक जाँच पास\nकुल स्कोर: 52.0\nविश्वास स्तर: कम\nयह केवल उदाहरण तुलना है, खेती की सिफारिश नहीं।\nसत्यापन के लिए आवश्यक जानकारी:\n- धान: मिट्टी का pH स्तर सत्यापित नहीं है।\n- धान: मिट्टी की उपयुक्तता सत्यापित नहीं है।\n- धान: मिट्टी का pH स्तर सत्यापित नहीं है।\n- धान: मिट्टी की उपयुक्तता सत्यापित नहीं है।\n- तिल: मिट्टी का pH स्तर सत्यापित नहीं है।\nइस फसल क्रम का स्थानीय कृषि स्रोतों से सत्यापन बाकी है।\nकृषि विशेषज्ञ की समीक्षा आवश्यक है।"
+          }
+        }
+      ]
+    }
+  }
+}
