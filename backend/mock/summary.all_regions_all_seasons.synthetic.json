@@ -1,0 +1,1606 @@
+{
+  "punjab_ludhiana.kharif": {
+    "region": "punjab_ludhiana",
+    "season": "kharif",
+    "period": "2026-06-01/2026-10-31",
+    "baseline_years": "2016-2025",
+    "rain_pct": -3.9,
+    "temp_delta": 0.2,
+    "dry_spell_days": 29,
+    "heat_days": 10,
+    "heat_days_normal": 14.7,
+    "missing_pct": 0.9,
+    "units": {
+      "rain_pct": "%",
+      "temp_delta": "C",
+      "dry_spell_days": "days",
+      "heat_days": "days",
+      "heat_days_normal": "days",
+      "missing_pct": "%",
+      "rain_mm_total": "mm",
+      "t_mean": "C",
+      "source_parameters": {
+        "T2M": "C",
+        "T2M_MAX": "C",
+        "PRECTOTCORR": "mm/day",
+        "ALLSKY_SFC_SW_DWN": "MJ/m^2/day"
+      }
+    },
+    "sources": [
+      "SYNTHETIC FIXTURE, NOT NASA DATA. NASA POWER (Prediction Of Worldwide Energy Resources), daily point API, community AG, parameters T2M,T2M_MAX,PRECTOTCORR,ALLSKY_SFC_SW_DWN, 2016-01-01 to 2026-11-06, fetched 2026-11-14T00:00:00+00:00, https://power.larc.nasa.gov/"
+    ],
+    "synthetic": true,
+    "season_window": {
+      "start": "06-01",
+      "end": "10-31",
+      "label": "Kharif (Jun-Oct)",
+      "status": "rough_default",
+      "partial": false,
+      "days_in_period": 153
+    },
+    "thresholds": {
+      "heat_t_max": 40.0,
+      "heat_t_max_unit": "C",
+      "heat_threshold_is_assumption": true,
+      "heat_threshold_note": "Heat threshold is a team assumption, not a validated agronomic value. Edit config.json (heat_threshold_c) or regions.json.",
+      "dry_day_rain_below": 1.0,
+      "dry_day_unit": "mm/day"
+    },
+    "details": {
+      "rain_mm_total": 508.1,
+      "rain_mm_total_normal": 528.5,
+      "t_mean": 26.25,
+      "t_mean_normal": 26.09,
+      "dry_spell_days_normal": 23.6,
+      "baseline_years_used": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "missing_pct_by_parameter": {
+        "rain_mm": 1.31,
+        "t_mean": 1.31,
+        "t_max": 0.0,
+        "solar": 0.0
+      }
+    },
+    "data_range": {
+      "cache_start": "2016-01-01",
+      "cache_end": "2026-11-06",
+      "period_start": "2026-06-01",
+      "period_end": "2026-10-31"
+    },
+    "missing_data_policy": "Fill values (-999, -99) are converted to null; nothing is imputed. Rain totals scale observed days to the full window. Heat days count observed days only (lower bound). Dry spells are broken by missing days (lower bound). Baselines skip null days.",
+    "quality": {
+      "confidence": "high",
+      "confidence_note": "Heuristic from missing data, baseline length and partial season. Treat low as 'insufficient data' in scoring.",
+      "partial_season": false
+    },
+    "source_metadata": {
+      "name": "NASA POWER (Prediction Of Worldwide Energy Resources), daily point API",
+      "site": "https://power.larc.nasa.gov/",
+      "community": "AG",
+      "parameters": {
+        "T2M": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters"
+        },
+        "T2M_MAX": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters Maximum"
+        },
+        "PRECTOTCORR": {
+          "units": "mm/day",
+          "longname": "Precipitation Corrected"
+        },
+        "ALLSKY_SFC_SW_DWN": {
+          "units": "MJ/m^2/day",
+          "longname": "All Sky Surface Shortwave Downward Irradiance"
+        }
+      },
+      "api": {
+        "name": "synthetic",
+        "version": "0"
+      },
+      "underlying_sources": [
+        "SYNTHETIC"
+      ],
+      "time_standard": "LST",
+      "fill_value": -999,
+      "request_url": "synthetic://fixture",
+      "fetched_at": "2026-11-14T00:00:00+00:00",
+      "synthetic": true
+    },
+    "location": {
+      "lat": 30.9,
+      "lon": 75.85,
+      "name": "Ludhiana",
+      "state": "Punjab",
+      "note": "Gridded satellite and model estimate for the grid cell containing this point, not a measurement at an individual farm."
+    },
+    "warnings": [
+      "SYNTHETIC FIXTURE DATA. Not NASA data. For development only.",
+      "Gridded satellite and model estimate for the grid cell containing this point, not a measurement at an individual farm.",
+      "Season windows for punjab_ludhiana are 'rough_default': Rough starting windows from the brief. Note that rabi (to Apr) and summer (from Mar) overlap in Mar-Apr, and summer (to Jun) overlaps kharif in Jun. Overlap is allowed, but confirm it is intended."
+    ],
+    "_mock": true,
+    "_mock_notice": "MOCK. Example numbers for building against the schema. Not NASA data. The real endpoint returns the same keys with computed values. Values here come from SYNTHETIC fixtures."
+  },
+  "punjab_ludhiana.rabi": {
+    "region": "punjab_ludhiana",
+    "season": "rabi",
+    "period": "2025-11-01/2026-04-30",
+    "baseline_years": "2016-2025",
+    "rain_pct": 42.9,
+    "temp_delta": 0.0,
+    "dry_spell_days": 53,
+    "heat_days": 1,
+    "heat_days_normal": 1.8,
+    "missing_pct": 0.9,
+    "units": {
+      "rain_pct": "%",
+      "temp_delta": "C",
+      "dry_spell_days": "days",
+      "heat_days": "days",
+      "heat_days_normal": "days",
+      "missing_pct": "%",
+      "rain_mm_total": "mm",
+      "t_mean": "C",
+      "source_parameters": {
+        "T2M": "C",
+        "T2M_MAX": "C",
+        "PRECTOTCORR": "mm/day",
+        "ALLSKY_SFC_SW_DWN": "MJ/m^2/day"
+      }
+    },
+    "sources": [
+      "SYNTHETIC FIXTURE, NOT NASA DATA. NASA POWER (Prediction Of Worldwide Energy Resources), daily point API, community AG, parameters T2M,T2M_MAX,PRECTOTCORR,ALLSKY_SFC_SW_DWN, 2016-01-01 to 2026-11-06, fetched 2026-11-14T00:00:00+00:00, https://power.larc.nasa.gov/"
+    ],
+    "synthetic": true,
+    "season_window": {
+      "start": "11-01",
+      "end": "04-30",
+      "label": "Rabi (Nov-Apr)",
+      "status": "rough_default",
+      "partial": false,
+      "days_in_period": 181
+    },
+    "thresholds": {
+      "heat_t_max": 40.0,
+      "heat_t_max_unit": "C",
+      "heat_threshold_is_assumption": true,
+      "heat_threshold_note": "Heat threshold is a team assumption, not a validated agronomic value. Edit config.json (heat_threshold_c) or regions.json.",
+      "dry_day_rain_below": 1.0,
+      "dry_day_unit": "mm/day"
+    },
+    "details": {
+      "rain_mm_total": 47.8,
+      "rain_mm_total_normal": 33.5,
+      "t_mean": 20.12,
+      "t_mean_normal": 20.1,
+      "dry_spell_days_normal": 62.0,
+      "baseline_years_used": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "missing_pct_by_parameter": {
+        "rain_mm": 1.1,
+        "t_mean": 0.0,
+        "t_max": 1.66,
+        "solar": 0.55
+      }
+    },
+    "data_range": {
+      "cache_start": "2016-01-01",
+      "cache_end": "2026-11-06",
+      "period_start": "2025-11-01",
+      "period_end": "2026-04-30"
+    },
+    "missing_data_policy": "Fill values (-999, -99) are converted to null; nothing is imputed. Rain totals scale observed days to the full window. Heat days count observed days only (lower bound). Dry spells are broken by missing days (lower bound). Baselines skip null days.",
+    "quality": {
+      "confidence": "high",
+      "confidence_note": "Heuristic from missing data, baseline length and partial season. Treat low as 'insufficient data' in scoring.",
+      "partial_season": false
+    },
+    "source_metadata": {
+      "name": "NASA POWER (Prediction Of Worldwide Energy Resources), daily point API",
+      "site": "https://power.larc.nasa.gov/",
+      "community": "AG",
+      "parameters": {
+        "T2M": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters"
+        },
+        "T2M_MAX": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters Maximum"
+        },
+        "PRECTOTCORR": {
+          "units": "mm/day",
+          "longname": "Precipitation Corrected"
+        },
+        "ALLSKY_SFC_SW_DWN": {
+          "units": "MJ/m^2/day",
+          "longname": "All Sky Surface Shortwave Downward Irradiance"
+        }
+      },
+      "api": {
+        "name": "synthetic",
+        "version": "0"
+      },
+      "underlying_sources": [
+        "SYNTHETIC"
+      ],
+      "time_standard": "LST",
+      "fill_value": -999,
+      "request_url": "synthetic://fixture",
+      "fetched_at": "2026-11-14T00:00:00+00:00",
+      "synthetic": true
+    },
+    "location": {
+      "lat": 30.9,
+      "lon": 75.85,
+      "name": "Ludhiana",
+      "state": "Punjab",
+      "note": "Gridded satellite and model estimate for the grid cell containing this point, not a measurement at an individual farm."
+    },
+    "warnings": [
+      "SYNTHETIC FIXTURE DATA. Not NASA data. For development only.",
+      "Gridded satellite and model estimate for the grid cell containing this point, not a measurement at an individual farm.",
+      "Season windows for punjab_ludhiana are 'rough_default': Rough starting windows from the brief. Note that rabi (to Apr) and summer (from Mar) overlap in Mar-Apr, and summer (to Jun) overlaps kharif in Jun. Overlap is allowed, but confirm it is intended."
+    ],
+    "_mock": true,
+    "_mock_notice": "MOCK. Example numbers for building against the schema. Not NASA data. The real endpoint returns the same keys with computed values. Values here come from SYNTHETIC fixtures."
+  },
+  "punjab_ludhiana.summer": {
+    "region": "punjab_ludhiana",
+    "season": "summer",
+    "period": "2026-03-01/2026-06-30",
+    "baseline_years": "2016-2025",
+    "rain_pct": 3.9,
+    "temp_delta": 0.0,
+    "dry_spell_days": 36,
+    "heat_days": 28,
+    "heat_days_normal": 33.3,
+    "missing_pct": 0.8,
+    "units": {
+      "rain_pct": "%",
+      "temp_delta": "C",
+      "dry_spell_days": "days",
+      "heat_days": "days",
+      "heat_days_normal": "days",
+      "missing_pct": "%",
+      "rain_mm_total": "mm",
+      "t_mean": "C",
+      "source_parameters": {
+        "T2M": "C",
+        "T2M_MAX": "C",
+        "PRECTOTCORR": "mm/day",
+        "ALLSKY_SFC_SW_DWN": "MJ/m^2/day"
+      }
+    },
+    "sources": [
+      "SYNTHETIC FIXTURE, NOT NASA DATA. NASA POWER (Prediction Of Worldwide Energy Resources), daily point API, community AG, parameters T2M,T2M_MAX,PRECTOTCORR,ALLSKY_SFC_SW_DWN, 2016-01-01 to 2026-11-06, fetched 2026-11-14T00:00:00+00:00, https://power.larc.nasa.gov/"
+    ],
+    "synthetic": true,
+    "season_window": {
+      "start": "03-01",
+      "end": "06-30",
+      "label": "Summer (Mar-Jun)",
+      "status": "rough_default",
+      "partial": false,
+      "days_in_period": 122
+    },
+    "thresholds": {
+      "heat_t_max": 40.0,
+      "heat_t_max_unit": "C",
+      "heat_threshold_is_assumption": true,
+      "heat_threshold_note": "Heat threshold is a team assumption, not a validated agronomic value. Edit config.json (heat_threshold_c) or regions.json.",
+      "dry_day_rain_below": 1.0,
+      "dry_day_unit": "mm/day"
+    },
+    "details": {
+      "rain_mm_total": 120.1,
+      "rain_mm_total_normal": 115.6,
+      "t_mean": 31.19,
+      "t_mean_normal": 31.21,
+      "dry_spell_days_normal": 54.6,
+      "baseline_years_used": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "missing_pct_by_parameter": {
+        "rain_mm": 1.64,
+        "t_mean": 0.0,
+        "t_max": 0.82,
+        "solar": 0.0
+      }
+    },
+    "data_range": {
+      "cache_start": "2016-01-01",
+      "cache_end": "2026-11-06",
+      "period_start": "2026-03-01",
+      "period_end": "2026-06-30"
+    },
+    "missing_data_policy": "Fill values (-999, -99) are converted to null; nothing is imputed. Rain totals scale observed days to the full window. Heat days count observed days only (lower bound). Dry spells are broken by missing days (lower bound). Baselines skip null days.",
+    "quality": {
+      "confidence": "high",
+      "confidence_note": "Heuristic from missing data, baseline length and partial season. Treat low as 'insufficient data' in scoring.",
+      "partial_season": false
+    },
+    "source_metadata": {
+      "name": "NASA POWER (Prediction Of Worldwide Energy Resources), daily point API",
+      "site": "https://power.larc.nasa.gov/",
+      "community": "AG",
+      "parameters": {
+        "T2M": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters"
+        },
+        "T2M_MAX": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters Maximum"
+        },
+        "PRECTOTCORR": {
+          "units": "mm/day",
+          "longname": "Precipitation Corrected"
+        },
+        "ALLSKY_SFC_SW_DWN": {
+          "units": "MJ/m^2/day",
+          "longname": "All Sky Surface Shortwave Downward Irradiance"
+        }
+      },
+      "api": {
+        "name": "synthetic",
+        "version": "0"
+      },
+      "underlying_sources": [
+        "SYNTHETIC"
+      ],
+      "time_standard": "LST",
+      "fill_value": -999,
+      "request_url": "synthetic://fixture",
+      "fetched_at": "2026-11-14T00:00:00+00:00",
+      "synthetic": true
+    },
+    "location": {
+      "lat": 30.9,
+      "lon": 75.85,
+      "name": "Ludhiana",
+      "state": "Punjab",
+      "note": "Gridded satellite and model estimate for the grid cell containing this point, not a measurement at an individual farm."
+    },
+    "warnings": [
+      "SYNTHETIC FIXTURE DATA. Not NASA data. For development only.",
+      "Gridded satellite and model estimate for the grid cell containing this point, not a measurement at an individual farm.",
+      "Season windows for punjab_ludhiana are 'rough_default': Rough starting windows from the brief. Note that rabi (to Apr) and summer (from Mar) overlap in Mar-Apr, and summer (to Jun) overlaps kharif in Jun. Overlap is allowed, but confirm it is intended."
+    ],
+    "_mock": true,
+    "_mock_notice": "MOCK. Example numbers for building against the schema. Not NASA data. The real endpoint returns the same keys with computed values. Values here come from SYNTHETIC fixtures."
+  },
+  "bihar_samastipur.kharif": {
+    "region": "bihar_samastipur",
+    "season": "kharif",
+    "period": "2026-06-01/2026-10-31",
+    "baseline_years": "2016-2025",
+    "rain_pct": -22.4,
+    "temp_delta": 0.1,
+    "dry_spell_days": 14,
+    "heat_days": 4,
+    "heat_days_normal": 3.5,
+    "missing_pct": 0.2,
+    "units": {
+      "rain_pct": "%",
+      "temp_delta": "C",
+      "dry_spell_days": "days",
+      "heat_days": "days",
+      "heat_days_normal": "days",
+      "missing_pct": "%",
+      "rain_mm_total": "mm",
+      "t_mean": "C",
+      "source_parameters": {
+        "T2M": "C",
+        "T2M_MAX": "C",
+        "PRECTOTCORR": "mm/day",
+        "ALLSKY_SFC_SW_DWN": "MJ/m^2/day"
+      }
+    },
+    "sources": [
+      "SYNTHETIC FIXTURE, NOT NASA DATA. NASA POWER (Prediction Of Worldwide Energy Resources), daily point API, community AG, parameters T2M,T2M_MAX,PRECTOTCORR,ALLSKY_SFC_SW_DWN, 2016-01-01 to 2026-11-06, fetched 2026-11-14T00:00:00+00:00, https://power.larc.nasa.gov/"
+    ],
+    "synthetic": true,
+    "season_window": {
+      "start": "06-01",
+      "end": "10-31",
+      "label": "Kharif (Jun-Oct)",
+      "status": "rough_default",
+      "partial": false,
+      "days_in_period": 153
+    },
+    "thresholds": {
+      "heat_t_max": 40.0,
+      "heat_t_max_unit": "C",
+      "heat_threshold_is_assumption": true,
+      "heat_threshold_note": "Heat threshold is a team assumption, not a validated agronomic value. Edit config.json (heat_threshold_c) or regions.json.",
+      "dry_day_rain_below": 1.0,
+      "dry_day_unit": "mm/day"
+    },
+    "details": {
+      "rain_mm_total": 845.8,
+      "rain_mm_total_normal": 1090.2,
+      "t_mean": 25.79,
+      "t_mean_normal": 25.69,
+      "dry_spell_days_normal": 20.5,
+      "baseline_years_used": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "missing_pct_by_parameter": {
+        "rain_mm": 0.0,
+        "t_mean": 0.0,
+        "t_max": 0.65,
+        "solar": 0.0
+      }
+    },
+    "data_range": {
+      "cache_start": "2016-01-01",
+      "cache_end": "2026-11-06",
+      "period_start": "2026-06-01",
+      "period_end": "2026-10-31"
+    },
+    "missing_data_policy": "Fill values (-999, -99) are converted to null; nothing is imputed. Rain totals scale observed days to the full window. Heat days count observed days only (lower bound). Dry spells are broken by missing days (lower bound). Baselines skip null days.",
+    "quality": {
+      "confidence": "high",
+      "confidence_note": "Heuristic from missing data, baseline length and partial season. Treat low as 'insufficient data' in scoring.",
+      "partial_season": false
+    },
+    "source_metadata": {
+      "name": "NASA POWER (Prediction Of Worldwide Energy Resources), daily point API",
+      "site": "https://power.larc.nasa.gov/",
+      "community": "AG",
+      "parameters": {
+        "T2M": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters"
+        },
+        "T2M_MAX": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters Maximum"
+        },
+        "PRECTOTCORR": {
+          "units": "mm/day",
+          "longname": "Precipitation Corrected"
+        },
+        "ALLSKY_SFC_SW_DWN": {
+          "units": "MJ/m^2/day",
+          "longname": "All Sky Surface Shortwave Downward Irradiance"
+        }
+      },
+      "api": {
+        "name": "synthetic",
+        "version": "0"
+      },
+      "underlying_sources": [
+        "SYNTHETIC"
+      ],
+      "time_standard": "LST",
+      "fill_value": -999,
+      "request_url": "synthetic://fixture",
+      "fetched_at": "2026-11-14T00:00:00+00:00",
+      "synthetic": true
+    },
+    "location": {
+      "lat": 25.86,
+      "lon": 85.78,
+      "name": "Samastipur",
+      "state": "Bihar",
+      "note": "Gridded satellite and model estimate for the grid cell containing this point, not a measurement at an individual farm."
+    },
+    "warnings": [
+      "SYNTHETIC FIXTURE DATA. Not NASA data. For development only.",
+      "Gridded satellite and model estimate for the grid cell containing this point, not a measurement at an individual farm.",
+      "Season windows for bihar_samastipur are 'rough_default': Rough starting windows from the brief. Note that rabi (to Apr) and summer (from Mar) overlap in Mar-Apr, and summer (to Jun) overlaps kharif in Jun. Overlap is allowed, but confirm it is intended."
+    ],
+    "_mock": true,
+    "_mock_notice": "MOCK. Example numbers for building against the schema. Not NASA data. The real endpoint returns the same keys with computed values. Values here come from SYNTHETIC fixtures."
+  },
+  "bihar_samastipur.rabi": {
+    "region": "bihar_samastipur",
+    "season": "rabi",
+    "period": "2025-11-01/2026-04-30",
+    "baseline_years": "2016-2025",
+    "rain_pct": 26.3,
+    "temp_delta": -0.1,
+    "dry_spell_days": 78,
+    "heat_days": 1,
+    "heat_days_normal": 1.7,
+    "missing_pct": 0.2,
+    "units": {
+      "rain_pct": "%",
+      "temp_delta": "C",
+      "dry_spell_days": "days",
+      "heat_days": "days",
+      "heat_days_normal": "days",
+      "missing_pct": "%",
+      "rain_mm_total": "mm",
+      "t_mean": "C",
+      "source_parameters": {
+        "T2M": "C",
+        "T2M_MAX": "C",
+        "PRECTOTCORR": "mm/day",
+        "ALLSKY_SFC_SW_DWN": "MJ/m^2/day"
+      }
+    },
+    "sources": [
+      "SYNTHETIC FIXTURE, NOT NASA DATA. NASA POWER (Prediction Of Worldwide Energy Resources), daily point API, community AG, parameters T2M,T2M_MAX,PRECTOTCORR,ALLSKY_SFC_SW_DWN, 2016-01-01 to 2026-11-06, fetched 2026-11-14T00:00:00+00:00, https://power.larc.nasa.gov/"
+    ],
+    "synthetic": true,
+    "season_window": {
+      "start": "11-01",
+      "end": "04-30",
+      "label": "Rabi (Nov-Apr)",
+      "status": "rough_default",
+      "partial": false,
+      "days_in_period": 181
+    },
+    "thresholds": {
+      "heat_t_max": 40.0,
+      "heat_t_max_unit": "C",
+      "heat_threshold_is_assumption": true,
+      "heat_threshold_note": "Heat threshold is a team assumption, not a validated agronomic value. Edit config.json (heat_threshold_c) or regions.json.",
+      "dry_day_rain_below": 1.0,
+      "dry_day_unit": "mm/day"
+    },
+    "details": {
+      "rain_mm_total": 47.5,
+      "rain_mm_total_normal": 37.6,
+      "t_mean": 23.65,
+      "t_mean_normal": 23.74,
+      "dry_spell_days_normal": 66.9,
+      "baseline_years_used": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "missing_pct_by_parameter": {
+        "rain_mm": 0.0,
+        "t_mean": 0.0,
+        "t_max": 0.55,
+        "solar": 0.0
+      }
+    },
+    "data_range": {
+      "cache_start": "2016-01-01",
+      "cache_end": "2026-11-06",
+      "period_start": "2025-11-01",
+      "period_end": "2026-04-30"
+    },
+    "missing_data_policy": "Fill values (-999, -99) are converted to null; nothing is imputed. Rain totals scale observed days to the full window. Heat days count observed days only (lower bound). Dry spells are broken by missing days (lower bound). Baselines skip null days.",
+    "quality": {
+      "confidence": "high",
+      "confidence_note": "Heuristic from missing data, baseline length and partial season. Treat low as 'insufficient data' in scoring.",
+      "partial_season": false
+    },
+    "source_metadata": {
+      "name": "NASA POWER (Prediction Of Worldwide Energy Resources), daily point API",
+      "site": "https://power.larc.nasa.gov/",
+      "community": "AG",
+      "parameters": {
+        "T2M": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters"
+        },
+        "T2M_MAX": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters Maximum"
+        },
+        "PRECTOTCORR": {
+          "units": "mm/day",
+          "longname": "Precipitation Corrected"
+        },
+        "ALLSKY_SFC_SW_DWN": {
+          "units": "MJ/m^2/day",
+          "longname": "All Sky Surface Shortwave Downward Irradiance"
+        }
+      },
+      "api": {
+        "name": "synthetic",
+        "version": "0"
+      },
+      "underlying_sources": [
+        "SYNTHETIC"
+      ],
+      "time_standard": "LST",
+      "fill_value": -999,
+      "request_url": "synthetic://fixture",
+      "fetched_at": "2026-11-14T00:00:00+00:00",
+      "synthetic": true
+    },
+    "location": {
+      "lat": 25.86,
+      "lon": 85.78,
+      "name": "Samastipur",
+      "state": "Bihar",
+      "note": "Gridded satellite and model estimate for the grid cell containing this point, not a measurement at an individual farm."
+    },
+    "warnings": [
+      "SYNTHETIC FIXTURE DATA. Not NASA data. For development only.",
+      "Gridded satellite and model estimate for the grid cell containing this point, not a measurement at an individual farm.",
+      "Season windows for bihar_samastipur are 'rough_default': Rough starting windows from the brief. Note that rabi (to Apr) and summer (from Mar) overlap in Mar-Apr, and summer (to Jun) overlaps kharif in Jun. Overlap is allowed, but confirm it is intended."
+    ],
+    "_mock": true,
+    "_mock_notice": "MOCK. Example numbers for building against the schema. Not NASA data. The real endpoint returns the same keys with computed values. Values here come from SYNTHETIC fixtures."
+  },
+  "bihar_samastipur.summer": {
+    "region": "bihar_samastipur",
+    "season": "summer",
+    "period": "2026-03-01/2026-06-30",
+    "baseline_years": "2016-2025",
+    "rain_pct": -13.9,
+    "temp_delta": -0.1,
+    "dry_spell_days": 51,
+    "heat_days": 15,
+    "heat_days_normal": 14.6,
+    "missing_pct": 0.5,
+    "units": {
+      "rain_pct": "%",
+      "temp_delta": "C",
+      "dry_spell_days": "days",
+      "heat_days": "days",
+      "heat_days_normal": "days",
+      "missing_pct": "%",
+      "rain_mm_total": "mm",
+      "t_mean": "C",
+      "source_parameters": {
+        "T2M": "C",
+        "T2M_MAX": "C",
+        "PRECTOTCORR": "mm/day",
+        "ALLSKY_SFC_SW_DWN": "MJ/m^2/day"
+      }
+    },
+    "sources": [
+      "SYNTHETIC FIXTURE, NOT NASA DATA. NASA POWER (Prediction Of Worldwide Energy Resources), daily point API, community AG, parameters T2M,T2M_MAX,PRECTOTCORR,ALLSKY_SFC_SW_DWN, 2016-01-01 to 2026-11-06, fetched 2026-11-14T00:00:00+00:00, https://power.larc.nasa.gov/"
+    ],
+    "synthetic": true,
+    "season_window": {
+      "start": "03-01",
+      "end": "06-30",
+      "label": "Summer (Mar-Jun)",
+      "status": "rough_default",
+      "partial": false,
+      "days_in_period": 122
+    },
+    "thresholds": {
+      "heat_t_max": 40.0,
+      "heat_t_max_unit": "C",
+      "heat_threshold_is_assumption": true,
+      "heat_threshold_note": "Heat threshold is a team assumption, not a validated agronomic value. Edit config.json (heat_threshold_c) or regions.json.",
+      "dry_day_rain_below": 1.0,
+      "dry_day_unit": "mm/day"
+    },
+    "details": {
+      "rain_mm_total": 239.2,
+      "rain_mm_total_normal": 277.8,
+      "t_mean": 31.02,
+      "t_mean_normal": 31.09,
+      "dry_spell_days_normal": 52.3,
+      "baseline_years_used": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "missing_pct_by_parameter": {
+        "rain_mm": 0.0,
+        "t_mean": 0.82,
+        "t_max": 0.82,
+        "solar": 0.0
+      }
+    },
+    "data_range": {
+      "cache_start": "2016-01-01",
+      "cache_end": "2026-11-06",
+      "period_start": "2026-03-01",
+      "period_end": "2026-06-30"
+    },
+    "missing_data_policy": "Fill values (-999, -99) are converted to null; nothing is imputed. Rain totals scale observed days to the full window. Heat days count observed days only (lower bound). Dry spells are broken by missing days (lower bound). Baselines skip null days.",
+    "quality": {
+      "confidence": "high",
+      "confidence_note": "Heuristic from missing data, baseline length and partial season. Treat low as 'insufficient data' in scoring.",
+      "partial_season": false
+    },
+    "source_metadata": {
+      "name": "NASA POWER (Prediction Of Worldwide Energy Resources), daily point API",
+      "site": "https://power.larc.nasa.gov/",
+      "community": "AG",
+      "parameters": {
+        "T2M": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters"
+        },
+        "T2M_MAX": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters Maximum"
+        },
+        "PRECTOTCORR": {
+          "units": "mm/day",
+          "longname": "Precipitation Corrected"
+        },
+        "ALLSKY_SFC_SW_DWN": {
+          "units": "MJ/m^2/day",
+          "longname": "All Sky Surface Shortwave Downward Irradiance"
+        }
+      },
+      "api": {
+        "name": "synthetic",
+        "version": "0"
+      },
+      "underlying_sources": [
+        "SYNTHETIC"
+      ],
+      "time_standard": "LST",
+      "fill_value": -999,
+      "request_url": "synthetic://fixture",
+      "fetched_at": "2026-11-14T00:00:00+00:00",
+      "synthetic": true
+    },
+    "location": {
+      "lat": 25.86,
+      "lon": 85.78,
+      "name": "Samastipur",
+      "state": "Bihar",
+      "note": "Gridded satellite and model estimate for the grid cell containing this point, not a measurement at an individual farm."
+    },
+    "warnings": [
+      "SYNTHETIC FIXTURE DATA. Not NASA data. For development only.",
+      "Gridded satellite and model estimate for the grid cell containing this point, not a measurement at an individual farm.",
+      "Season windows for bihar_samastipur are 'rough_default': Rough starting windows from the brief. Note that rabi (to Apr) and summer (from Mar) overlap in Mar-Apr, and summer (to Jun) overlaps kharif in Jun. Overlap is allowed, but confirm it is intended."
+    ],
+    "_mock": true,
+    "_mock_notice": "MOCK. Example numbers for building against the schema. Not NASA data. The real endpoint returns the same keys with computed values. Values here come from SYNTHETIC fixtures."
+  },
+  "maharashtra_akola.kharif": {
+    "region": "maharashtra_akola",
+    "season": "kharif",
+    "period": "2026-06-01/2026-10-31",
+    "baseline_years": "2016-2025",
+    "rain_pct": -7.7,
+    "temp_delta": 0.1,
+    "dry_spell_days": 30,
+    "heat_days": 3,
+    "heat_days_normal": 2.8,
+    "missing_pct": 0.0,
+    "units": {
+      "rain_pct": "%",
+      "temp_delta": "C",
+      "dry_spell_days": "days",
+      "heat_days": "days",
+      "heat_days_normal": "days",
+      "missing_pct": "%",
+      "rain_mm_total": "mm",
+      "t_mean": "C",
+      "source_parameters": {
+        "T2M": "C",
+        "T2M_MAX": "C",
+        "PRECTOTCORR": "mm/day",
+        "ALLSKY_SFC_SW_DWN": "MJ/m^2/day"
+      }
+    },
+    "sources": [
+      "SYNTHETIC FIXTURE, NOT NASA DATA. NASA POWER (Prediction Of Worldwide Energy Resources), daily point API, community AG, parameters T2M,T2M_MAX,PRECTOTCORR,ALLSKY_SFC_SW_DWN, 2016-01-01 to 2026-11-06, fetched 2026-11-14T00:00:00+00:00, https://power.larc.nasa.gov/"
+    ],
+    "synthetic": true,
+    "season_window": {
+      "start": "06-01",
+      "end": "10-31",
+      "label": "Kharif (Jun-Oct)",
+      "status": "rough_default",
+      "partial": false,
+      "days_in_period": 153
+    },
+    "thresholds": {
+      "heat_t_max": 40.0,
+      "heat_t_max_unit": "C",
+      "heat_threshold_is_assumption": true,
+      "heat_threshold_note": "Heat threshold is a team assumption, not a validated agronomic value. Edit config.json (heat_threshold_c) or regions.json.",
+      "dry_day_rain_below": 1.0,
+      "dry_day_unit": "mm/day"
+    },
+    "details": {
+      "rain_mm_total": 579.8,
+      "rain_mm_total_normal": 628.1,
+      "t_mean": 25.56,
+      "t_mean_normal": 25.47,
+      "dry_spell_days_normal": 21.3,
+      "baseline_years_used": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "missing_pct_by_parameter": {
+        "rain_mm": 0.0,
+        "t_mean": 0.0,
+        "t_max": 0.0,
+        "solar": 0.0
+      }
+    },
+    "data_range": {
+      "cache_start": "2016-01-01",
+      "cache_end": "2026-11-06",
+      "period_start": "2026-06-01",
+      "period_end": "2026-10-31"
+    },
+    "missing_data_policy": "Fill values (-999, -99) are converted to null; nothing is imputed. Rain totals scale observed days to the full window. Heat days count observed days only (lower bound). Dry spells are broken by missing days (lower bound). Baselines skip null days.",
+    "quality": {
+      "confidence": "high",
+      "confidence_note": "Heuristic from missing data, baseline length and partial season. Treat low as 'insufficient data' in scoring.",
+      "partial_season": false
+    },
+    "source_metadata": {
+      "name": "NASA POWER (Prediction Of Worldwide Energy Resources), daily point API",
+      "site": "https://power.larc.nasa.gov/",
+      "community": "AG",
+      "parameters": {
+        "T2M": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters"
+        },
+        "T2M_MAX": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters Maximum"
+        },
+        "PRECTOTCORR": {
+          "units": "mm/day",
+          "longname": "Precipitation Corrected"
+        },
+        "ALLSKY_SFC_SW_DWN": {
+          "units": "MJ/m^2/day",
+          "longname": "All Sky Surface Shortwave Downward Irradiance"
+        }
+      },
+      "api": {
+        "name": "synthetic",
+        "version": "0"
+      },
+      "underlying_sources": [
+        "SYNTHETIC"
+      ],
+      "time_standard": "LST",
+      "fill_value": -999,
+      "request_url": "synthetic://fixture",
+      "fetched_at": "2026-11-14T00:00:00+00:00",
+      "synthetic": true
+    },
+    "location": {
+      "lat": 20.71,
+      "lon": 77.0,
+      "name": "Akola",
+      "state": "Maharashtra",
+      "note": "Gridded satellite and model estimate for the grid cell containing this point, not a measurement at an individual farm."
+    },
+    "warnings": [
+      "SYNTHETIC FIXTURE DATA. Not NASA data. For development only.",
+      "Gridded satellite and model estimate for the grid cell containing this point, not a measurement at an individual farm.",
+      "Season windows for maharashtra_akola are 'rough_default': Rough starting windows from the brief. Note that rabi (to Apr) and summer (from Mar) overlap in Mar-Apr, and summer (to Jun) overlaps kharif in Jun. Overlap is allowed, but confirm it is intended."
+    ],
+    "_mock": true,
+    "_mock_notice": "MOCK. Example numbers for building against the schema. Not NASA data. The real endpoint returns the same keys with computed values. Values here come from SYNTHETIC fixtures."
+  },
+  "maharashtra_akola.rabi": {
+    "region": "maharashtra_akola",
+    "season": "rabi",
+    "period": "2025-11-01/2026-04-30",
+    "baseline_years": "2016-2025",
+    "rain_pct": -57.8,
+    "temp_delta": -0.2,
+    "dry_spell_days": 124,
+    "heat_days": 11,
+    "heat_days_normal": 9.4,
+    "missing_pct": 0.4,
+    "units": {
+      "rain_pct": "%",
+      "temp_delta": "C",
+      "dry_spell_days": "days",
+      "heat_days": "days",
+      "heat_days_normal": "days",
+      "missing_pct": "%",
+      "rain_mm_total": "mm",
+      "t_mean": "C",
+      "source_parameters": {
+        "T2M": "C",
+        "T2M_MAX": "C",
+        "PRECTOTCORR": "mm/day",
+        "ALLSKY_SFC_SW_DWN": "MJ/m^2/day"
+      }
+    },
+    "sources": [
+      "SYNTHETIC FIXTURE, NOT NASA DATA. NASA POWER (Prediction Of Worldwide Energy Resources), daily point API, community AG, parameters T2M,T2M_MAX,PRECTOTCORR,ALLSKY_SFC_SW_DWN, 2016-01-01 to 2026-11-06, fetched 2026-11-14T00:00:00+00:00, https://power.larc.nasa.gov/"
+    ],
+    "synthetic": true,
+    "season_window": {
+      "start": "11-01",
+      "end": "04-30",
+      "label": "Rabi (Nov-Apr)",
+      "status": "rough_default",
+      "partial": false,
+      "days_in_period": 181
+    },
+    "thresholds": {
+      "heat_t_max": 40.0,
+      "heat_t_max_unit": "C",
+      "heat_threshold_is_assumption": true,
+      "heat_threshold_note": "Heat threshold is a team assumption, not a validated agronomic value. Edit config.json (heat_threshold_c) or regions.json.",
+      "dry_day_rain_below": 1.0,
+      "dry_day_unit": "mm/day"
+    },
+    "details": {
+      "rain_mm_total": 13.5,
+      "rain_mm_total_normal": 32.0,
+      "t_mean": 26.83,
+      "t_mean_normal": 27.01,
+      "dry_spell_days_normal": 51.2,
+      "baseline_years_used": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "missing_pct_by_parameter": {
+        "rain_mm": 0.0,
+        "t_mean": 0.55,
+        "t_max": 0.55,
+        "solar": 1.1
+      }
+    },
+    "data_range": {
+      "cache_start": "2016-01-01",
+      "cache_end": "2026-11-06",
+      "period_start": "2025-11-01",
+      "period_end": "2026-04-30"
+    },
+    "missing_data_policy": "Fill values (-999, -99) are converted to null; nothing is imputed. Rain totals scale observed days to the full window. Heat days count observed days only (lower bound). Dry spells are broken by missing days (lower bound). Baselines skip null days.",
+    "quality": {
+      "confidence": "high",
+      "confidence_note": "Heuristic from missing data, baseline length and partial season. Treat low as 'insufficient data' in scoring.",
+      "partial_season": false
+    },
+    "source_metadata": {
+      "name": "NASA POWER (Prediction Of Worldwide Energy Resources), daily point API",
+      "site": "https://power.larc.nasa.gov/",
+      "community": "AG",
+      "parameters": {
+        "T2M": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters"
+        },
+        "T2M_MAX": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters Maximum"
+        },
+        "PRECTOTCORR": {
+          "units": "mm/day",
+          "longname": "Precipitation Corrected"
+        },
+        "ALLSKY_SFC_SW_DWN": {
+          "units": "MJ/m^2/day",
+          "longname": "All Sky Surface Shortwave Downward Irradiance"
+        }
+      },
+      "api": {
+        "name": "synthetic",
+        "version": "0"
+      },
+      "underlying_sources": [
+        "SYNTHETIC"
+      ],
+      "time_standard": "LST",
+      "fill_value": -999,
+      "request_url": "synthetic://fixture",
+      "fetched_at": "2026-11-14T00:00:00+00:00",
+      "synthetic": true
+    },
+    "location": {
+      "lat": 20.71,
+      "lon": 77.0,
+      "name": "Akola",
+      "state": "Maharashtra",
+      "note": "Gridded satellite and model estimate for the grid cell containing this point, not a measurement at an individual farm."
+    },
+    "warnings": [
+      "SYNTHETIC FIXTURE DATA. Not NASA data. For development only.",
+      "Gridded satellite and model estimate for the grid cell containing this point, not a measurement at an individual farm.",
+      "Season windows for maharashtra_akola are 'rough_default': Rough starting windows from the brief. Note that rabi (to Apr) and summer (from Mar) overlap in Mar-Apr, and summer (to Jun) overlaps kharif in Jun. Overlap is allowed, but confirm it is intended."
+    ],
+    "_mock": true,
+    "_mock_notice": "MOCK. Example numbers for building against the schema. Not NASA data. The real endpoint returns the same keys with computed values. Values here come from SYNTHETIC fixtures."
+  },
+  "maharashtra_akola.summer": {
+    "region": "maharashtra_akola",
+    "season": "summer",
+    "period": "2026-03-01/2026-06-30",
+    "baseline_years": "2016-2025",
+    "rain_pct": -22.3,
+    "temp_delta": 0.0,
+    "dry_spell_days": 44,
+    "heat_days": 23,
+    "heat_days_normal": 22.2,
+    "missing_pct": 0.0,
+    "units": {
+      "rain_pct": "%",
+      "temp_delta": "C",
+      "dry_spell_days": "days",
+      "heat_days": "days",
+      "heat_days_normal": "days",
+      "missing_pct": "%",
+      "rain_mm_total": "mm",
+      "t_mean": "C",
+      "source_parameters": {
+        "T2M": "C",
+        "T2M_MAX": "C",
+        "PRECTOTCORR": "mm/day",
+        "ALLSKY_SFC_SW_DWN": "MJ/m^2/day"
+      }
+    },
+    "sources": [
+      "SYNTHETIC FIXTURE, NOT NASA DATA. NASA POWER (Prediction Of Worldwide Energy Resources), daily point API, community AG, parameters T2M,T2M_MAX,PRECTOTCORR,ALLSKY_SFC_SW_DWN, 2016-01-01 to 2026-11-06, fetched 2026-11-14T00:00:00+00:00, https://power.larc.nasa.gov/"
+    ],
+    "synthetic": true,
+    "season_window": {
+      "start": "03-01",
+      "end": "06-30",
+      "label": "Summer (Mar-Jun)",
+      "status": "rough_default",
+      "partial": false,
+      "days_in_period": 122
+    },
+    "thresholds": {
+      "heat_t_max": 40.0,
+      "heat_t_max_unit": "C",
+      "heat_threshold_is_assumption": true,
+      "heat_threshold_note": "Heat threshold is a team assumption, not a validated agronomic value. Edit config.json (heat_threshold_c) or regions.json.",
+      "dry_day_rain_below": 1.0,
+      "dry_day_unit": "mm/day"
+    },
+    "details": {
+      "rain_mm_total": 97.9,
+      "rain_mm_total_normal": 126.0,
+      "t_mean": 32.08,
+      "t_mean_normal": 32.08,
+      "dry_spell_days_normal": 48.0,
+      "baseline_years_used": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "missing_pct_by_parameter": {
+        "rain_mm": 0.0,
+        "t_mean": 0.0,
+        "t_max": 0.0,
+        "solar": 0.82
+      }
+    },
+    "data_range": {
+      "cache_start": "2016-01-01",
+      "cache_end": "2026-11-06",
+      "period_start": "2026-03-01",
+      "period_end": "2026-06-30"
+    },
+    "missing_data_policy": "Fill values (-999, -99) are converted to null; nothing is imputed. Rain totals scale observed days to the full window. Heat days count observed days only (lower bound). Dry spells are broken by missing days (lower bound). Baselines skip null days.",
+    "quality": {
+      "confidence": "high",
+      "confidence_note": "Heuristic from missing data, baseline length and partial season. Treat low as 'insufficient data' in scoring.",
+      "partial_season": false
+    },
+    "source_metadata": {
+      "name": "NASA POWER (Prediction Of Worldwide Energy Resources), daily point API",
+      "site": "https://power.larc.nasa.gov/",
+      "community": "AG",
+      "parameters": {
+        "T2M": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters"
+        },
+        "T2M_MAX": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters Maximum"
+        },
+        "PRECTOTCORR": {
+          "units": "mm/day",
+          "longname": "Precipitation Corrected"
+        },
+        "ALLSKY_SFC_SW_DWN": {
+          "units": "MJ/m^2/day",
+          "longname": "All Sky Surface Shortwave Downward Irradiance"
+        }
+      },
+      "api": {
+        "name": "synthetic",
+        "version": "0"
+      },
+      "underlying_sources": [
+        "SYNTHETIC"
+      ],
+      "time_standard": "LST",
+      "fill_value": -999,
+      "request_url": "synthetic://fixture",
+      "fetched_at": "2026-11-14T00:00:00+00:00",
+      "synthetic": true
+    },
+    "location": {
+      "lat": 20.71,
+      "lon": 77.0,
+      "name": "Akola",
+      "state": "Maharashtra",
+      "note": "Gridded satellite and model estimate for the grid cell containing this point, not a measurement at an individual farm."
+    },
+    "warnings": [
+      "SYNTHETIC FIXTURE DATA. Not NASA data. For development only.",
+      "Gridded satellite and model estimate for the grid cell containing this point, not a measurement at an individual farm.",
+      "Season windows for maharashtra_akola are 'rough_default': Rough starting windows from the brief. Note that rabi (to Apr) and summer (from Mar) overlap in Mar-Apr, and summer (to Jun) overlaps kharif in Jun. Overlap is allowed, but confirm it is intended."
+    ],
+    "_mock": true,
+    "_mock_notice": "MOCK. Example numbers for building against the schema. Not NASA data. The real endpoint returns the same keys with computed values. Values here come from SYNTHETIC fixtures."
+  },
+  "tamilnadu_thanjavur.kharif": {
+    "region": "tamilnadu_thanjavur",
+    "season": "kharif",
+    "period": "2026-06-01/2026-10-31",
+    "baseline_years": "2016-2025",
+    "rain_pct": 2.0,
+    "temp_delta": 0.0,
+    "dry_spell_days": 29,
+    "heat_days": 0,
+    "heat_days_normal": 0.4,
+    "missing_pct": 0.2,
+    "units": {
+      "rain_pct": "%",
+      "temp_delta": "C",
+      "dry_spell_days": "days",
+      "heat_days": "days",
+      "heat_days_normal": "days",
+      "missing_pct": "%",
+      "rain_mm_total": "mm",
+      "t_mean": "C",
+      "source_parameters": {
+        "T2M": "C",
+        "T2M_MAX": "C",
+        "PRECTOTCORR": "mm/day",
+        "ALLSKY_SFC_SW_DWN": "MJ/m^2/day"
+      }
+    },
+    "sources": [
+      "SYNTHETIC FIXTURE, NOT NASA DATA. NASA POWER (Prediction Of Worldwide Energy Resources), daily point API, community AG, parameters T2M,T2M_MAX,PRECTOTCORR,ALLSKY_SFC_SW_DWN, 2016-01-01 to 2026-11-06, fetched 2026-11-14T00:00:00+00:00, https://power.larc.nasa.gov/"
+    ],
+    "synthetic": true,
+    "season_window": {
+      "start": "06-01",
+      "end": "10-31",
+      "label": "Kharif (Jun-Oct)",
+      "status": "needs_confirmation",
+      "partial": false,
+      "days_in_period": 153
+    },
+    "thresholds": {
+      "heat_t_max": 40.0,
+      "heat_t_max_unit": "C",
+      "heat_threshold_is_assumption": true,
+      "heat_threshold_note": "Heat threshold is a team assumption, not a validated agronomic value. Edit config.json (heat_threshold_c) or regions.json.",
+      "dry_day_rain_below": 1.0,
+      "dry_day_unit": "mm/day"
+    },
+    "details": {
+      "rain_mm_total": 571.8,
+      "rain_mm_total_normal": 560.4,
+      "t_mean": 27.05,
+      "t_mean_normal": 27.1,
+      "dry_spell_days_normal": 22.7,
+      "baseline_years_used": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "missing_pct_by_parameter": {
+        "rain_mm": 0.0,
+        "t_mean": 0.65,
+        "t_max": 0.0,
+        "solar": 0.0
+      }
+    },
+    "data_range": {
+      "cache_start": "2016-01-01",
+      "cache_end": "2026-11-06",
+      "period_start": "2026-06-01",
+      "period_end": "2026-10-31"
+    },
+    "missing_data_policy": "Fill values (-999, -99) are converted to null; nothing is imputed. Rain totals scale observed days to the full window. Heat days count observed days only (lower bound). Dry spells are broken by missing days (lower bound). Baselines skip null days.",
+    "quality": {
+      "confidence": "high",
+      "confidence_note": "Heuristic from missing data, baseline length and partial season. Treat low as 'insufficient data' in scoring.",
+      "partial_season": false
+    },
+    "source_metadata": {
+      "name": "NASA POWER (Prediction Of Worldwide Energy Resources), daily point API",
+      "site": "https://power.larc.nasa.gov/",
+      "community": "AG",
+      "parameters": {
+        "T2M": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters"
+        },
+        "T2M_MAX": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters Maximum"
+        },
+        "PRECTOTCORR": {
+          "units": "mm/day",
+          "longname": "Precipitation Corrected"
+        },
+        "ALLSKY_SFC_SW_DWN": {
+          "units": "MJ/m^2/day",
+          "longname": "All Sky Surface Shortwave Downward Irradiance"
+        }
+      },
+      "api": {
+        "name": "synthetic",
+        "version": "0"
+      },
+      "underlying_sources": [
+        "SYNTHETIC"
+      ],
+      "time_standard": "LST",
+      "fill_value": -999,
+      "request_url": "synthetic://fixture",
+      "fetched_at": "2026-11-14T00:00:00+00:00",
+      "synthetic": true
+    },
+    "location": {
+      "lat": 10.79,
+      "lon": 79.14,
+      "name": "Thanjavur",
+      "state": "Tamil Nadu",
+      "note": "Gridded satellite and model estimate for the grid cell containing this point, not a measurement at an individual farm."
+    },
+    "warnings": [
+      "SYNTHETIC FIXTURE DATA. Not NASA data. For development only.",
+      "Gridded satellite and model estimate for the grid cell containing this point, not a measurement at an individual farm.",
+      "Season windows for tamilnadu_thanjavur are 'needs_confirmation': Cauvery delta seasons differ from the north Indian windows. These are placeholders copied from the defaults. Confirm the windows with a regional source (for example TNAU or the local KVK) and edit them here."
+    ],
+    "_mock": true,
+    "_mock_notice": "MOCK. Example numbers for building against the schema. Not NASA data. The real endpoint returns the same keys with computed values. Values here come from SYNTHETIC fixtures."
+  },
+  "tamilnadu_thanjavur.rabi": {
+    "region": "tamilnadu_thanjavur",
+    "season": "rabi",
+    "period": "2025-11-01/2026-04-30",
+    "baseline_years": "2016-2025",
+    "rain_pct": -34.2,
+    "temp_delta": 0.0,
+    "dry_spell_days": 33,
+    "heat_days": 0,
+    "heat_days_normal": 0.6,
+    "missing_pct": 0.4,
+    "units": {
+      "rain_pct": "%",
+      "temp_delta": "C",
+      "dry_spell_days": "days",
+      "heat_days": "days",
+      "heat_days_normal": "days",
+      "missing_pct": "%",
+      "rain_mm_total": "mm",
+      "t_mean": "C",
+      "source_parameters": {
+        "T2M": "C",
+        "T2M_MAX": "C",
+        "PRECTOTCORR": "mm/day",
+        "ALLSKY_SFC_SW_DWN": "MJ/m^2/day"
+      }
+    },
+    "sources": [
+      "SYNTHETIC FIXTURE, NOT NASA DATA. NASA POWER (Prediction Of Worldwide Energy Resources), daily point API, community AG, parameters T2M,T2M_MAX,PRECTOTCORR,ALLSKY_SFC_SW_DWN, 2016-01-01 to 2026-11-06, fetched 2026-11-14T00:00:00+00:00, https://power.larc.nasa.gov/"
+    ],
+    "synthetic": true,
+    "season_window": {
+      "start": "11-01",
+      "end": "04-30",
+      "label": "Rabi (Nov-Apr)",
+      "status": "needs_confirmation",
+      "partial": false,
+      "days_in_period": 181
+    },
+    "thresholds": {
+      "heat_t_max": 40.0,
+      "heat_t_max_unit": "C",
+      "heat_threshold_is_assumption": true,
+      "heat_threshold_note": "Heat threshold is a team assumption, not a validated agronomic value. Edit config.json (heat_threshold_c) or regions.json.",
+      "dry_day_rain_below": 1.0,
+      "dry_day_unit": "mm/day"
+    },
+    "details": {
+      "rain_mm_total": 27.0,
+      "rain_mm_total_normal": 41.0,
+      "t_mean": 27.91,
+      "t_mean_normal": 27.88,
+      "dry_spell_days_normal": 52.1,
+      "baseline_years_used": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "missing_pct_by_parameter": {
+        "rain_mm": 0.55,
+        "t_mean": 0.55,
+        "t_max": 0.0,
+        "solar": 0.0
+      }
+    },
+    "data_range": {
+      "cache_start": "2016-01-01",
+      "cache_end": "2026-11-06",
+      "period_start": "2025-11-01",
+      "period_end": "2026-04-30"
+    },
+    "missing_data_policy": "Fill values (-999, -99) are converted to null; nothing is imputed. Rain totals scale observed days to the full window. Heat days count observed days only (lower bound). Dry spells are broken by missing days (lower bound). Baselines skip null days.",
+    "quality": {
+      "confidence": "high",
+      "confidence_note": "Heuristic from missing data, baseline length and partial season. Treat low as 'insufficient data' in scoring.",
+      "partial_season": false
+    },
+    "source_metadata": {
+      "name": "NASA POWER (Prediction Of Worldwide Energy Resources), daily point API",
+      "site": "https://power.larc.nasa.gov/",
+      "community": "AG",
+      "parameters": {
+        "T2M": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters"
+        },
+        "T2M_MAX": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters Maximum"
+        },
+        "PRECTOTCORR": {
+          "units": "mm/day",
+          "longname": "Precipitation Corrected"
+        },
+        "ALLSKY_SFC_SW_DWN": {
+          "units": "MJ/m^2/day",
+          "longname": "All Sky Surface Shortwave Downward Irradiance"
+        }
+      },
+      "api": {
+        "name": "synthetic",
+        "version": "0"
+      },
+      "underlying_sources": [
+        "SYNTHETIC"
+      ],
+      "time_standard": "LST",
+      "fill_value": -999,
+      "request_url": "synthetic://fixture",
+      "fetched_at": "2026-11-14T00:00:00+00:00",
+      "synthetic": true
+    },
+    "location": {
+      "lat": 10.79,
+      "lon": 79.14,
+      "name": "Thanjavur",
+      "state": "Tamil Nadu",
+      "note": "Gridded satellite and model estimate for the grid cell containing this point, not a measurement at an individual farm."
+    },
+    "warnings": [
+      "SYNTHETIC FIXTURE DATA. Not NASA data. For development only.",
+      "Gridded satellite and model estimate for the grid cell containing this point, not a measurement at an individual farm.",
+      "Season windows for tamilnadu_thanjavur are 'needs_confirmation': Cauvery delta seasons differ from the north Indian windows. These are placeholders copied from the defaults. Confirm the windows with a regional source (for example TNAU or the local KVK) and edit them here."
+    ],
+    "_mock": true,
+    "_mock_notice": "MOCK. Example numbers for building against the schema. Not NASA data. The real endpoint returns the same keys with computed values. Values here come from SYNTHETIC fixtures."
+  },
+  "tamilnadu_thanjavur.summer": {
+    "region": "tamilnadu_thanjavur",
+    "season": "summer",
+    "period": "2026-03-01/2026-06-30",
+    "baseline_years": "2016-2025",
+    "rain_pct": -7.8,
+    "temp_delta": 0.1,
+    "dry_spell_days": 54,
+    "heat_days": 0,
+    "heat_days_normal": 2.5,
+    "missing_pct": 0.5,
+    "units": {
+      "rain_pct": "%",
+      "temp_delta": "C",
+      "dry_spell_days": "days",
+      "heat_days": "days",
+      "heat_days_normal": "days",
+      "missing_pct": "%",
+      "rain_mm_total": "mm",
+      "t_mean": "C",
+      "source_parameters": {
+        "T2M": "C",
+        "T2M_MAX": "C",
+        "PRECTOTCORR": "mm/day",
+        "ALLSKY_SFC_SW_DWN": "MJ/m^2/day"
+      }
+    },
+    "sources": [
+      "SYNTHETIC FIXTURE, NOT NASA DATA. NASA POWER (Prediction Of Worldwide Energy Resources), daily point API, community AG, parameters T2M,T2M_MAX,PRECTOTCORR,ALLSKY_SFC_SW_DWN, 2016-01-01 to 2026-11-06, fetched 2026-11-14T00:00:00+00:00, https://power.larc.nasa.gov/"
+    ],
+    "synthetic": true,
+    "season_window": {
+      "start": "03-01",
+      "end": "06-30",
+      "label": "Summer (Mar-Jun)",
+      "status": "needs_confirmation",
+      "partial": false,
+      "days_in_period": 122
+    },
+    "thresholds": {
+      "heat_t_max": 40.0,
+      "heat_t_max_unit": "C",
+      "heat_threshold_is_assumption": true,
+      "heat_threshold_note": "Heat threshold is a team assumption, not a validated agronomic value. Edit config.json (heat_threshold_c) or regions.json.",
+      "dry_day_rain_below": 1.0,
+      "dry_day_unit": "mm/day"
+    },
+    "details": {
+      "rain_mm_total": 115.0,
+      "rain_mm_total_normal": 124.8,
+      "t_mean": 30.55,
+      "t_mean_normal": 30.46,
+      "dry_spell_days_normal": 43.5,
+      "baseline_years_used": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "missing_pct_by_parameter": {
+        "rain_mm": 0.82,
+        "t_mean": 0.82,
+        "t_max": 0.0,
+        "solar": 0.0
+      }
+    },
+    "data_range": {
+      "cache_start": "2016-01-01",
+      "cache_end": "2026-11-06",
+      "period_start": "2026-03-01",
+      "period_end": "2026-06-30"
+    },
+    "missing_data_policy": "Fill values (-999, -99) are converted to null; nothing is imputed. Rain totals scale observed days to the full window. Heat days count observed days only (lower bound). Dry spells are broken by missing days (lower bound). Baselines skip null days.",
+    "quality": {
+      "confidence": "high",
+      "confidence_note": "Heuristic from missing data, baseline length and partial season. Treat low as 'insufficient data' in scoring.",
+      "partial_season": false
+    },
+    "source_metadata": {
+      "name": "NASA POWER (Prediction Of Worldwide Energy Resources), daily point API",
+      "site": "https://power.larc.nasa.gov/",
+      "community": "AG",
+      "parameters": {
+        "T2M": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters"
+        },
+        "T2M_MAX": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters Maximum"
+        },
+        "PRECTOTCORR": {
+          "units": "mm/day",
+          "longname": "Precipitation Corrected"
+        },
+        "ALLSKY_SFC_SW_DWN": {
+          "units": "MJ/m^2/day",
+          "longname": "All Sky Surface Shortwave Downward Irradiance"
+        }
+      },
+      "api": {
+        "name": "synthetic",
+        "version": "0"
+      },
+      "underlying_sources": [
+        "SYNTHETIC"
+      ],
+      "time_standard": "LST",
+      "fill_value": -999,
+      "request_url": "synthetic://fixture",
+      "fetched_at": "2026-11-14T00:00:00+00:00",
+      "synthetic": true
+    },
+    "location": {
+      "lat": 10.79,
+      "lon": 79.14,
+      "name": "Thanjavur",
+      "state": "Tamil Nadu",
+      "note": "Gridded satellite and model estimate for the grid cell containing this point, not a measurement at an individual farm."
+    },
+    "warnings": [
+      "SYNTHETIC FIXTURE DATA. Not NASA data. For development only.",
+      "Gridded satellite and model estimate for the grid cell containing this point, not a measurement at an individual farm.",
+      "Season windows for tamilnadu_thanjavur are 'needs_confirmation': Cauvery delta seasons differ from the north Indian windows. These are placeholders copied from the defaults. Confirm the windows with a regional source (for example TNAU or the local KVK) and edit them here."
+    ],
+    "_mock": true,
+    "_mock_notice": "MOCK. Example numbers for building against the schema. Not NASA data. The real endpoint returns the same keys with computed values. Values here come from SYNTHETIC fixtures."
+  }
+}

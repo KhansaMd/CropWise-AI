@@ -1,0 +1,23 @@
+{
+  "power": {
+    "base_url": "https://power.larc.nasa.gov/api/temporal/daily/point",
+    "community": "AG",
+    "parameters": ["T2M", "T2M_MAX", "PRECTOTCORR", "ALLSKY_SFC_SW_DWN"],
+    "start": "2016-01-01",
+    "timeout_s": 90,
+    "retries": 3
+  },
+  "baseline_years": [2016, 2025],
+  "min_baseline_years": 5,
+  "baseline_smooth_days": 0,
+  "heat_threshold_c": 40.0,
+  "heat_threshold_note": "Team assumption, not a validated agronomic number. Edit here or per region in regions.json, or set FIELDSHIFT_HEAT_THRESHOLD_C.",
+  "dry_day_mm": 1.0,
+  "fill_values": [-999, -99],
+  "confidence_heuristic": {
+    "missing_pct_medium": 2.0,
+    "missing_pct_low": 10.0
+  },
+  "cache_dir": "data/cache",
+  "synthetic_dir": "data/synthetic"
+}

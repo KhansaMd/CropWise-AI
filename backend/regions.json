@@ -1,0 +1,39 @@
+{
+  "defaults": {
+    "seasons": {
+      "kharif": {"start": "06-01", "end": "10-31", "label": "Kharif (Jun-Oct)"},
+      "rabi":   {"start": "11-01", "end": "04-30", "label": "Rabi (Nov-Apr)"},
+      "summer": {"start": "03-01", "end": "06-30", "label": "Summer (Mar-Jun)"}
+    },
+    "seasons_status": "rough_default",
+    "seasons_note": "Rough starting windows from the brief. Note that rabi (to Apr) and summer (from Mar) overlap in Mar-Apr, and summer (to Jun) overlaps kharif in Jun. Overlap is allowed, but confirm it is intended."
+  },
+  "regions": {
+    "punjab_ludhiana": {
+      "name": "Ludhiana",
+      "state": "Punjab",
+      "lat": 30.90,
+      "lon": 75.85
+    },
+    "bihar_samastipur": {
+      "name": "Samastipur",
+      "state": "Bihar",
+      "lat": 25.86,
+      "lon": 85.78
+    },
+    "maharashtra_akola": {
+      "name": "Akola",
+      "state": "Maharashtra",
+      "lat": 20.71,
+      "lon": 77.00
+    },
+    "tamilnadu_thanjavur": {
+      "name": "Thanjavur",
+      "state": "Tamil Nadu",
+      "lat": 10.79,
+      "lon": 79.14,
+      "seasons_status": "needs_confirmation",
+      "seasons_note": "Cauvery delta seasons differ from the north Indian windows. These are placeholders copied from the defaults. Confirm the windows with a regional source (for example TNAU or the local KVK) and edit them here."
+    }
+  }
+}
