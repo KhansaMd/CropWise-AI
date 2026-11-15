@@ -1,0 +1,215 @@
+
+{
+  "config": {
+    "heat_threshold_c": 40,
+    "heat_threshold_note": "Editable team assumption, not a validated crop-specific threshold.",
+    "baseline_years": [2016, 2025],
+    "climate_start_date": "2016-01-01",
+    "climate_end_date": "latest_available",
+    "rotation_label": "example comparison, not a recommendation"
+  },
+  "regions": {
+    "punjab_ludhiana": {
+      "state": "Punjab",
+      "district": "Ludhiana",
+      "coordinates": {
+        "latitude": 30.9,
+        "longitude": 75.85
+      },
+      "season_windows": {
+        "kharif": {
+          "start": "06-01",
+          "end": "10-31"
+        },
+        "rabi": {
+          "start": "11-01",
+          "end": "04-30"
+        },
+        "summer": {
+          "start": "03-01",
+          "end": "06-30"
+        }
+      },
+      "season_window_note": "Provisional climate aggregation windows, not a validated crop calendar.",
+      "rotations": [
+        {
+          "id": "base",
+          "type": "sequence",
+          "crops": ["rice", "wheat"],
+          "label": "example comparison, not a recommendation",
+          "evidence_status": "pending_source_verification",
+          "needs_expert_review": true
+        },
+        {
+          "id": "alt1",
+          "type": "sequence",
+          "crops": ["maize", "wheat"],
+          "label": "example comparison, not a recommendation",
+          "evidence_status": "pending_source_verification",
+          "needs_expert_review": true
+        },
+        {
+          "id": "alt2",
+          "type": "sequence",
+          "crops": ["rice", "wheat", "black_gram"],
+          "label": "example comparison, not a recommendation",
+          "evidence_status": "exploratory",
+          "needs_expert_review": true,
+          "review_note": "Verify the exact summer black gram sequence and timing after wheat using PAU guidance."
+        }
+      ]
+    },
+    "bihar_samastipur": {
+      "state": "Bihar",
+      "district": "Samastipur",
+      "coordinates": {
+        "latitude": 25.86,
+        "longitude": 85.78
+      },
+      "season_windows": {
+        "kharif": {
+          "start": "06-01",
+          "end": "10-31"
+        },
+        "rabi": {
+          "start": "11-01",
+          "end": "04-30"
+        },
+        "summer": {
+          "start": "03-01",
+          "end": "06-30"
+        }
+      },
+      "season_window_note": "Provisional climate aggregation windows, not a validated crop calendar.",
+      "rotations": [
+        {
+          "id": "base",
+          "type": "sequence",
+          "crops": ["rice", "wheat"],
+          "label": "example comparison, not a recommendation",
+          "evidence_status": "pending_source_verification",
+          "needs_expert_review": true
+        },
+        {
+          "id": "alt1",
+          "type": "sequence",
+          "crops": ["rice", "mustard"],
+          "label": "example comparison, not a recommendation",
+          "evidence_status": "exploratory",
+          "needs_expert_review": true,
+          "review_note": "Verify local rice-to-mustard feasibility and timing using RPCAU or Bihar agricultural extension guidance."
+        },
+        {
+          "id": "alt2",
+          "type": "sequence",
+          "crops": ["maize", "wheat"],
+          "label": "example comparison, not a recommendation",
+          "evidence_status": "pending_source_verification",
+          "needs_expert_review": true
+        }
+      ]
+    },
+    "maharashtra_akola": {
+      "state": "Maharashtra",
+      "district": "Akola",
+      "coordinates": {
+        "latitude": 20.71,
+        "longitude": 77.0
+      },
+      "season_windows": {
+        "kharif": {
+          "start": "06-01",
+          "end": "10-31"
+        },
+        "rabi": {
+          "start": "11-01",
+          "end": "04-30"
+        },
+        "summer": {
+          "start": "03-01",
+          "end": "06-30"
+        }
+      },
+      "season_window_note": "Provisional climate aggregation windows, not a validated crop calendar.",
+      "rotations": [
+        {
+          "id": "base",
+          "type": "sequence",
+          "crops": ["soybean", "chickpea"],
+          "label": "example comparison, not a recommendation",
+          "evidence_status": "pending_source_verification",
+          "needs_expert_review": true
+        },
+        {
+          "id": "alt1",
+          "type": "intercrop",
+          "crops": ["cotton", "soybean"],
+          "label": "example comparison, not a recommendation",
+          "evidence_status": "pending_source_verification",
+          "needs_expert_review": true,
+          "review_note": "Verify local cotton-soybean intercropping practice and row ratio using PDKV guidance."
+        },
+        {
+          "id": "alt2",
+          "type": "sequence",
+          "crops": ["soybean", "mustard"],
+          "label": "example comparison, not a recommendation",
+          "evidence_status": "exploratory",
+          "needs_expert_review": true,
+          "review_note": "Verify soybean-to-mustard sequence feasibility and local recommendations using PDKV guidance."
+        }
+      ]
+    },
+    "tamilnadu_thanjavur": {
+      "state": "Tamil Nadu",
+      "district": "Thanjavur",
+      "coordinates": {
+        "latitude": 10.79,
+        "longitude": 79.14
+      },
+      "season_windows": {
+        "kharif": {
+          "start": "06-01",
+          "end": "10-31"
+        },
+        "rabi": {
+          "start": "11-01",
+          "end": "02-28"
+        },
+        "summer": {
+          "start": "03-01",
+          "end": "05-31"
+        }
+      },
+      "season_window_note": "Provisional climate aggregation windows. These do not fully represent the Cauvery Delta Kuruvai, Samba and Thaladi crop calendar.",
+      "rotations": [
+        {
+          "id": "base",
+          "type": "sequence",
+          "crops": ["rice", "rice"],
+          "label": "example comparison, not a recommendation",
+          "display_note": "Represents two rice seasons in the year.",
+          "evidence_status": "pending_source_verification",
+          "needs_expert_review": true
+        },
+        {
+          "id": "alt1",
+          "type": "sequence",
+          "crops": ["rice", "black_gram"],
+          "label": "example comparison, not a recommendation",
+          "evidence_status": "pending_source_verification",
+          "needs_expert_review": true
+        },
+        {
+          "id": "alt2",
+          "type": "sequence",
+          "crops": ["rice", "rice", "sesame"],
+          "label": "example comparison, not a recommendation",
+          "evidence_status": "exploratory",
+          "needs_expert_review": true,
+          "review_note": "Verify the rice-rice-sesame sequence and seasonal timing using TNAU or local Cauvery Delta agricultural guidance."
+        }
+      ]
+    }
+  }
+}

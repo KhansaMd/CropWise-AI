@@ -1,0 +1,351 @@
+{
+  "metadata": {
+    "note": "Crop profiles are decision-support inputs, not farming recommendations. Null means not yet verified for the selected district and variety.",
+    "rating_scale": {
+      "water_need": "1 = low water requirement; 5 = high water requirement",
+      "heat_tolerance": "1 = low tolerance; 5 = high tolerance",
+      "drought_tolerance": "1 = low tolerance; 5 = high tolerance"
+    },
+    "source_policy": "Only populate agronomic values after checking an official crop or state agricultural university source.",
+    "rating_note": "Water, heat and drought ratings are illustrative team estimates, not validated district- or variety-specific measurements."
+  },
+  "crops": [
+    {
+      "crop_id": "rice",
+      "name_en": "Rice",
+      "name_hi": "धान",
+      "scientific_name": "Oryza sativa",
+      "season": [
+        "kharif",
+        "rabi"
+      ],
+      "duration_days": null,
+      "water_need": 5,
+      "heat_tolerance": 4,
+      "drought_tolerance": 1,
+      "nitrogen_fixing": false,
+      "ph_range": null,
+      "soil_ok": null,
+      "confidence": "partial",
+      "source_url": "https://agritech.tnau.ac.in/agriculture/agri_seasonandvarieties_rice.html",
+      "verification_note": "Season and duration vary by district and variety; use local crop calendar.",
+      "evidence": {
+        "water_need": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "heat_tolerance": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "drought_tolerance": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "nitrogen_fixing": {
+          "classification": "pending_source_verification",
+          "note": "Existing biological classification retained; supporting source verification pending."
+        }
+      }
+    },
+    {
+      "crop_id": "wheat",
+      "name_en": "Wheat",
+      "name_hi": "गेहूँ",
+      "scientific_name": "Triticum aestivum",
+      "season": [
+        "rabi"
+      ],
+      "duration_days": null,
+      "water_need": 4,
+      "heat_tolerance": 1,
+      "drought_tolerance": 2,
+      "nitrogen_fixing": false,
+      "ph_range": null,
+      "soil_ok": null,
+      "confidence": "partial",
+      "source_url": "https://icar.org.in/sites/default/files/Circulars/India_BRICS_Agriculture_Report.pdf",
+      "verification_note": "General Rabi classification; verify variety-specific duration and local requirements.",
+      "evidence": {
+        "water_need": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "heat_tolerance": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "drought_tolerance": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "nitrogen_fixing": {
+          "classification": "pending_source_verification",
+          "note": "Existing biological classification retained; supporting source verification pending."
+        }
+      }
+    },
+    {
+      "crop_id": "maize",
+      "name_en": "Maize",
+      "name_hi": "मक्का",
+      "scientific_name": "Zea mays",
+      "season": [
+        "kharif",
+        "rabi"
+      ],
+      "duration_days": null,
+      "water_need": 3,
+      "heat_tolerance": 3,
+      "drought_tolerance": 2,
+      "nitrogen_fixing": false,
+      "ph_range": null,
+      "soil_ok": null,
+      "confidence": "partial",
+      "source_url": "https://icar.org.in/sites/default/files/Circulars/India_BRICS_Agriculture_Report.pdf",
+      "verification_note": "Season depends on region and irrigation; verify local variety and sowing window.",
+      "evidence": {
+        "water_need": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "heat_tolerance": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "drought_tolerance": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "nitrogen_fixing": {
+          "classification": "pending_source_verification",
+          "note": "Existing biological classification retained; supporting source verification pending."
+        }
+      }
+    },
+    {
+      "crop_id": "mustard",
+      "name_en": "Mustard",
+      "name_hi": "सरसों",
+      "scientific_name": "Brassica juncea",
+      "season": [
+        "rabi"
+      ],
+      "duration_days": null,
+      "water_need": 2,
+      "heat_tolerance": 4,
+      "drought_tolerance": 3,
+      "nitrogen_fixing": false,
+      "ph_range": null,
+      "soil_ok": null,
+      "confidence": "partial",
+      "source_url": "https://icar.org.in/sites/default/files/Circulars/India_BRICS_Agriculture_Report.pdf",
+      "verification_note": "General Rabi classification; local suitability and duration remain unverified.",
+      "evidence": {
+        "water_need": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "heat_tolerance": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "drought_tolerance": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "nitrogen_fixing": {
+          "classification": "pending_source_verification",
+          "note": "Existing biological classification retained; supporting source verification pending."
+        }
+      }
+    },
+    {
+      "crop_id": "soybean",
+      "name_en": "Soybean",
+      "name_hi": "सोयाबीन",
+      "scientific_name": "Glycine max",
+      "season": [
+        "kharif"
+      ],
+      "duration_days": null,
+      "water_need": 3,
+      "heat_tolerance": 3,
+      "drought_tolerance": 4,
+      "nitrogen_fixing": true,
+      "ph_range": null,
+      "soil_ok": null,
+      "confidence": "partial",
+      "source_url": "https://icar.org.in/sites/default/files/Circulars/India_BRICS_Agriculture_Report.pdf",
+      "verification_note": "General Kharif classification; verify local variety, soil and duration.",
+      "evidence": {
+        "water_need": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "heat_tolerance": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "drought_tolerance": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "nitrogen_fixing": {
+          "classification": "pending_source_verification",
+          "note": "Existing biological classification retained; supporting source verification pending."
+        }
+      }
+    },
+    {
+      "crop_id": "chickpea",
+      "name_en": "Chickpea",
+      "name_hi": "चना",
+      "scientific_name": "Cicer arietinum",
+      "season": [
+        "rabi"
+      ],
+      "duration_days": null,
+      "water_need": 2,
+      "heat_tolerance": 4,
+      "drought_tolerance": 4,
+      "nitrogen_fixing": true,
+      "ph_range": null,
+      "soil_ok": null,
+      "confidence": "partial",
+      "source_url": "https://plantauthority.gov.in/seed-planting-material-requirement",
+      "verification_note": "Rabi crop classification; verify variety-specific duration and district suitability.",
+      "evidence": {
+        "water_need": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "heat_tolerance": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "drought_tolerance": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "nitrogen_fixing": {
+          "classification": "pending_source_verification",
+          "note": "Existing biological classification retained; supporting source verification pending."
+        }
+      }
+    },
+    {
+      "crop_id": "cotton",
+      "name_en": "Cotton",
+      "name_hi": "कपास",
+      "scientific_name": "Gossypium spp.",
+      "season": [
+        "kharif"
+      ],
+      "duration_days": null,
+      "water_need": 3,
+      "heat_tolerance": 4,
+      "drought_tolerance": 3,
+      "nitrogen_fixing": false,
+      "ph_range": null,
+      "soil_ok": null,
+      "confidence": "partial",
+      "source_url": "https://icar.org.in/sites/default/files/Circulars/India_BRICS_Agriculture_Report.pdf",
+      "verification_note": "General Kharif classification; species, variety and local management affect duration.",
+      "evidence": {
+        "water_need": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "heat_tolerance": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "drought_tolerance": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "nitrogen_fixing": {
+          "classification": "pending_source_verification",
+          "note": "Existing biological classification retained; supporting source verification pending."
+        }
+      }
+    },
+    {
+      "crop_id": "black_gram",
+      "name_en": "Black gram",
+      "name_hi": "उड़द",
+      "scientific_name": "Vigna mungo",
+      "season": [
+        "kharif",
+        "summer"
+      ],
+      "duration_days": null,
+      "water_need": 2,
+      "heat_tolerance": 3,
+      "drought_tolerance": 3,
+      "nitrogen_fixing": true,
+      "ph_range": null,
+      "soil_ok": null,
+      "confidence": "partial",
+      "source_url": "https://agritech.tnau.ac.in/agriculture/CropProduction/Pulses/pulses_blackgram.html",
+      "verification_note": "TNAU documents multiple seasons including summer and rice fallows; verify district and variety.",
+      "evidence": {
+        "water_need": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "heat_tolerance": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "drought_tolerance": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "nitrogen_fixing": {
+          "classification": "pending_source_verification",
+          "note": "Existing biological classification retained; supporting source verification pending."
+        }
+      }
+    },
+    {
+      "crop_id": "sesame",
+      "name_en": "Sesame",
+      "name_hi": "तिल",
+      "scientific_name": "Sesamum indicum",
+      "season": [
+        "kharif",
+        "summer"
+      ],
+      "duration_days": null,
+      "water_need": 1,
+      "heat_tolerance": 4,
+      "drought_tolerance": 4,
+      "nitrogen_fixing": false,
+      "ph_range": null,
+      "soil_ok": null,
+      "confidence": "partial",
+      "source_url": "https://icar.org.in/sites/default/files/Circulars/India_BRICS_Agriculture_Report.pdf",
+      "verification_note": "Season varies by region; verify Tamil Nadu Cauvery Delta timing with TNAU.",
+      "evidence": {
+        "water_need": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "heat_tolerance": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "drought_tolerance": {
+          "classification": "team_estimate",
+          "note": "Illustrative comparative rating; requires agricultural source verification."
+        },
+        "nitrogen_fixing": {
+          "classification": "pending_source_verification",
+          "note": "Existing biological classification retained; supporting source verification pending."
+        }
+      }
+    }
+  ]
+}

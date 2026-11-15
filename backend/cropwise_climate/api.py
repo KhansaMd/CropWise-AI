@@ -6,14 +6,16 @@ from datetime import date
 from typing import Literal, Optional
 
 from fastapi import FastAPI, HTTPException, Query
+from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 
 from . import climate
 from .settings import load_regions, load_settings
 from .store import CacheMissing, load_cache
+from .rotation import compare_rotation
 
 app = FastAPI(title="FieldShift climate API", version="0.1.0")
-app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["GET"], allow_headers=["*"])
+app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["GET", "POST"], allow_headers=["*"])
 
 SETTINGS = load_settings()
 REGIONS = load_regions()
@@ -78,3 +80,18 @@ def climate_summary(region: str,
         raise HTTPException(422, str(exc))
     except ValueError as exc:
         raise HTTPException(422, str(exc))
+
+
+class RotationCompareRequest(BaseModel):
+    region_id: str
+    rotation_id: str
+
+
+@app.post("/api/rotation/compare")
+def rotation_compare(request: RotationCompareRequest):
+    try:
+        return compare_rotation(request.region_id, request.rotation_id)
+    except KeyError as exc:
+        raise HTTPException(404, str(exc))
+    except LookupError as exc:
+        raise HTTPException(404, str(exc))
