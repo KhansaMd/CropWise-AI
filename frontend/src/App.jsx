@@ -6,6 +6,7 @@ import {
   AlertTriangle, CalendarDays, Database, ClipboardList
 } from "lucide-react";
 import frontendData from "./data/frontend_data.json";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000";
 
 const translations = {
   English: {
@@ -95,7 +96,7 @@ function App() {
 
       try {
         const response = await fetch(
-          `http://127.0.0.1:8000/api/climate/summary?region=${encodeURIComponent(regionId)}&season=${encodeURIComponent(season)}`,
+          `${API_BASE_URL}/api/climate/summary?region=${encodeURIComponent(regionId)}&season=${encodeURIComponent(season)}`,
           { signal: controller.signal }
         );
 
@@ -135,7 +136,7 @@ function App() {
         const results = await Promise.all(
           (district.rotations || []).map(async (option) => {
             const response = await fetch(
-              "http://127.0.0.1:8000/api/rotation/compare",
+              `${API_BASE_URL}/api/rotation/compare`,
               {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
