@@ -4,7 +4,7 @@ The response shape handled here is the documented POWER JSON layout:
   properties.parameter.<PARAM>.<YYYYMMDD> = value
   parameters.<PARAM>.units / longname      (units come from the API, never assumed)
   header.fill_value / sources / api / time_standard
-Run `python -m fieldshift.ingest --probe` once against the live API to confirm
+Run `python -m cropwise_climate.ingest --probe` once against the live API to confirm
 this shape. If anything differs, the probe prints exactly what to report.
 """
 

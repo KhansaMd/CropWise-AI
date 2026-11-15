@@ -15,14 +15,14 @@ NASA POWER could not be reached from the sandbox where this was written. The ing
 
 ```bash
 pip install -r requirements.txt
-python -m fieldshift.ingest --probe          # 5-day sample, prints raw structure, saves data/probe_raw.json
-python -m fieldshift.ingest                  # all regions, 2016-01-01 to yesterday, writes data/cache/*.json + .parquet
-python -m fieldshift.ingest --region punjab_ludhiana
-uvicorn fieldshift.api:app --port 8000
+python -m cropwise_climate.ingest --probe          # 5-day sample, prints raw structure, saves data/probe_raw.json
+python -m cropwise_climate.ingest                  # all regions, 2016-01-01 to yesterday, writes data/cache/*.json + .parquet
+python -m cropwise_climate.ingest --region punjab_ludhiana
+uvicorn cropwise_climate.api:app --port 8000
 pytest -q
 ```
 
-Development without network: `python -m fieldshift.ingest --synthetic` then `FIELDSHIFT_USE_SYNTHETIC=1 uvicorn fieldshift.api:app`. Synthetic data is flagged `"synthetic": true` and starts every warnings list with SYNTHETIC. Never demo it as real.
+Development without network: `python -m cropwise_climate.ingest --synthetic` then `FIELDSHIFT_USE_SYNTHETIC=1 uvicorn cropwise_climate.api:app`. Synthetic data is flagged `"synthetic": true` and starts every warnings list with SYNTHETIC. Never demo it as real.
 
 The ingest prints % missing per parameter. Commit `data/cache/` so the demo never calls the live API.
 

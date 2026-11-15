@@ -5,7 +5,7 @@ import pandas as pd
 import pytest
 
 from conftest import UNITS_OK, constant_frame, make_cache
-from fieldshift import climate
+from cropwise_climate import climate
 
 
 def test_baseline_mean_std_and_leap_day():

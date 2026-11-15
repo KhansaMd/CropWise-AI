@@ -1,4 +1,4 @@
-"""FastAPI app. Run: uvicorn fieldshift.api:app --reload --port 8000"""
+"""FastAPI app. Run: uvicorn cropwise_climate.api:app --reload --port 8000"""
 
 from __future__ import annotations
 

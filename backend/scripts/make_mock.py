@@ -13,9 +13,9 @@ from pathlib import Path
 os.environ["FIELDSHIFT_USE_SYNTHETIC"] = "1"
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from fieldshift import climate  # noqa: E402
-from fieldshift.settings import ROOT, load_regions, load_settings  # noqa: E402
-from fieldshift.store import load_cache  # noqa: E402
+from cropwise_climate import climate  # noqa: E402
+from cropwise_climate.settings import ROOT, load_regions, load_settings  # noqa: E402
+from cropwise_climate.store import load_cache  # noqa: E402
 
 NOTICE = ("MOCK. Example numbers for building against the schema. Not NASA data. "
           "The real endpoint returns the same keys with computed values.")

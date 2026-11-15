@@ -5,7 +5,7 @@ from pathlib import Path
 import pytest
 from fastapi.testclient import TestClient
 
-from fieldshift import api
+from cropwise_climate import api
 
 client = TestClient(api.app)
 SUMMARY_KEYS = {"region", "season", "period", "baseline_years", "rain_pct", "temp_delta", "dry_spell_days",
@@ -58,7 +58,7 @@ def test_missing_cache_returns_503_with_hint(tmp_path, monkeypatch):
     monkeypatch.setattr(api, "SETTINGS", empty)
     r = client.get("/api/climate", params={"region": "punjab_ludhiana"})
     assert r.status_code == 503
-    assert "fieldshift.ingest" in r.json()["detail"]
+    assert "cropwise_climate.ingest" in r.json()["detail"]
 
 
 def test_mock_has_same_keys_as_real_endpoint():

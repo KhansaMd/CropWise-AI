@@ -2,9 +2,9 @@ from datetime import date
 
 import pytest
 
-from fieldshift.ingest import ingest_region  # noqa: F401  (import check)
-from fieldshift.power import PowerError, parse_response
-from fieldshift.store import build_cache_doc, doc_to_cache
+from cropwise_climate.ingest import ingest_region  # noqa: F401  (import check)
+from cropwise_climate.power import PowerError, parse_response
+from cropwise_climate.store import build_cache_doc, doc_to_cache
 
 
 def raw_response():

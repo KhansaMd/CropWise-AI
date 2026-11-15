@@ -10,15 +10,15 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from fieldshift.settings import load_regions, load_settings
-from fieldshift.store import Cache
+from cropwise_climate.settings import load_regions, load_settings
+from cropwise_climate.store import Cache
 
 
 @pytest.fixture(scope="session", autouse=True)
 def synthetic_fixtures():
     settings = load_settings()
     if not (settings.synthetic_dir / "punjab_ludhiana.json").exists():
-        from fieldshift.synthetic import write_all
+        from cropwise_climate.synthetic import write_all
         write_all(settings, load_regions())
 
 

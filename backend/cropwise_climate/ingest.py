@@ -1,9 +1,9 @@
 """Ingestion CLI. Run this where power.larc.nasa.gov is reachable.
 
-  python -m fieldshift.ingest --probe          # 5-day sample, prints the raw shape and units
-  python -m fieldshift.ingest                  # all regions, 2016-01-01 to latest available
-  python -m fieldshift.ingest --region punjab_ludhiana
-  python -m fieldshift.ingest --synthetic      # offline fixtures for development only
+  python -m cropwise_climate.ingest --probe          # 5-day sample, prints the raw shape and units
+  python -m cropwise_climate.ingest                  # all regions, 2016-01-01 to latest available
+  python -m cropwise_climate.ingest --region punjab_ludhiana
+  python -m cropwise_climate.ingest --synthetic      # offline fixtures for development only
 
 Outputs data/cache/<region>.json (canonical) and data/cache/<region>.parquet.
 """

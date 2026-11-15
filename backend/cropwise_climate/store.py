@@ -157,7 +157,7 @@ _MEMO: dict = {}
 def load_cache(settings: Settings, region_id: str) -> Cache:
     path = cache_path(settings, region_id)
     if not path.exists():
-        hint = ("Run `python -m fieldshift.ingest` on a machine that can reach power.larc.nasa.gov, "
+        hint = ("Run `python -m cropwise_climate.ingest` on a machine that can reach power.larc.nasa.gov, "
                 "or set FIELDSHIFT_USE_SYNTHETIC=1 for development only.")
         raise CacheMissing(f"No cache for {region_id} at {path}. {hint}")
     key = (str(path), path.stat().st_mtime_ns)

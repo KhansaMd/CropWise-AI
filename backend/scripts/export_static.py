@@ -17,9 +17,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from fieldshift import climate  # noqa: E402
-from fieldshift.settings import ROOT, load_regions, load_settings  # noqa: E402
-from fieldshift.store import CacheMissing, load_cache  # noqa: E402
+from cropwise_climate import climate  # noqa: E402
+from cropwise_climate.settings import ROOT, load_regions, load_settings  # noqa: E402
+from cropwise_climate.store import CacheMissing, load_cache  # noqa: E402
 
 
 def main() -> int:
